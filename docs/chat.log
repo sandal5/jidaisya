@@ -8,3 +8,4 @@
 2025-08-15 13:08 [ASSISTANT] 已补全 zh/ja 多语言页面骨架并构建验证通过，更新 CHANGELOG 到 Alpha-0.2。
 2025-08-15 14:08 [USER] @pic.index.md 按照这个文档，生成对应目录和占位图片
 2025-08-15 14:08 [ASSISTANT] 已创建 src/assets/images/ 的 books/covers、brand、news/2024 目录与占位图片，并更新 CHANGELOG 到 Alpha-0.3。
+2025-08-15 16:08 修复 Pages 404：更新 wrangler.toml 为 Pages 规范（[build] command='pnpm run build'，pages_build_output_dir='dist'）；请重新部署验证。

@@ -1,3 +1,7 @@
+## Alpha-1.1 — 2025-08-15 16:08
+- 修复：Cloudflare Pages 未执行构建导致 404；更新 wrangler.toml 为 Pages 规范（[build] + pages_build_output_dir）
+- 建议：重新部署验证首页与多语言路由可用
+
 ## Alpha-1.0 — 2025-08-15 16:36
 - 修复：删除构建产物dist目录，避免版本控制冲突
 - 修复：交换judicial-goddess.jpg和china-syracuse-plato.jpg文件内容，使图片与书名匹配
