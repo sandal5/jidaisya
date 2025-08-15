@@ -112,18 +112,27 @@ const currentNav = navItems[lang] || navItems['zh-tw'];
 </header>
 
 <script>
-  // Mobile menu functionality
+  // Mobile menu functionality with touch support
   document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const menuIcon = document.getElementById('menu-icon');
     const closeIcon = document.getElementById('close-icon');
     
-    if (!mobileMenuButton || !mobileMenu || !menuIcon || !closeIcon) return;
+    if (!mobileMenuButton || !mobileMenu || !menuIcon || !closeIcon) {
+      console.warn('Mobile menu elements not found');
+      return;
+    }
     
     let isMenuOpen = false;
     
-    const toggleMenu = () => {
+    const toggleMenu = (event) => {
+      // Prevent default to avoid any interference
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      
       isMenuOpen = !isMenuOpen;
       
       if (isMenuOpen) {
@@ -151,15 +160,35 @@ const currentNav = navItems[lang] || navItems['zh-tw'];
       }
     };
     
-    // Toggle menu on button click
-    mobileMenuButton.addEventListener('click', toggleMenu);
+    // Add both click and touch event listeners for mobile compatibility
+    // Prevent double events on devices that support both touch and mouse
+    let touchStartTime = 0;
     
-    // Close menu when clicking on a link
+    mobileMenuButton.addEventListener('touchstart', (e) => {
+      touchStartTime = Date.now();
+      toggleMenu(e);
+    }, { passive: false });
+    
+    mobileMenuButton.addEventListener('click', (e) => {
+      // If touch event just happened, ignore click to prevent double trigger
+      if (Date.now() - touchStartTime < 300) {
+        return;
+      }
+      toggleMenu(e);
+    });
+    
+    // Close menu when clicking/touching on a link
     mobileMenu.addEventListener('click', (e) => {
       if (e.target && e.target.tagName === 'A') {
-        toggleMenu();
+        toggleMenu(e);
       }
     });
+    
+    mobileMenu.addEventListener('touchstart', (e) => {
+      if (e.target && e.target.tagName === 'A') {
+        toggleMenu(e);
+      }
+    }, { passive: false });
     
     // Close menu on window resize to desktop size
     window.addEventListener('resize', () => {
@@ -171,8 +200,11 @@ const currentNav = navItems[lang] || navItems['zh-tw'];
     // Close menu on escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && isMenuOpen) {
-        toggleMenu();
+        toggleMenu(e);
       }
     });
+    
+    // Debug: Log when script loads
+    console.log('Mobile menu script loaded successfully');
   });
 </script>

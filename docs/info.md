@@ -3,7 +3,7 @@
 〒 657-0016
 地址 神戶市灘区篠原台11-12
 FAX　+81788820353
-Email:katsuyokobe@gmail.com
+Email:oukawk@yahoo.co.jp
 
 
 
