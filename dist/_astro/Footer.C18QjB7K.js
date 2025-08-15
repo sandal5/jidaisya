@@ -1,12 +1,43 @@
-import { b as createAstro, c as createComponent, d as addAttribute, e as renderHead, f as renderSlot, a as renderTemplate, m as maybeRenderHead } from './astro/server.BSy3iVTU.js';
+import { b as createAstro, c as createComponent, a as renderTemplate, d as renderSlot, e as renderHead, f as addAttribute, m as maybeRenderHead } from './astro/server.EkyQgL7s.js';
 /* empty css                        */
 
+var __freeze$1 = Object.freeze;
+var __defProp$1 = Object.defineProperty;
+var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(cooked.slice()) }));
+var _a$1, _b, _c;
 const $$Astro$2 = createAstro("https://jidaisya.pages.dev");
 const $$BaseLayout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$BaseLayout;
-  const { title = "\u6642\u4EE3\u793E", lang = "zh" } = Astro2.props;
-  return renderTemplate`<html${addAttribute(lang, "lang")}> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${title}</title><link rel="icon" href="/favicon.ico" sizes="any">${renderHead()}</head> <body class="min-h-screen"> ${renderSlot($$result, $$slots["header"])} <main class="container pt-24 pb-8"> ${renderSlot($$result, $$slots["default"])} </main> ${renderSlot($$result, $$slots["footer"])} </body></html>`;
+  const {
+    title = "\u6642\u4EE3\u793E",
+    description = "\u5C08\u6CE8\u4E2D\u570B\u8FD1\u73FE\u7576\u4EE3\u7814\u7A76\u7684\u6B0A\u5A01\u5B78\u8853\u8457\u4F5C\u51FA\u7248\u8207\u50B3\u64AD",
+    lang = "zh-tw",
+    image,
+    author,
+    publishedDate,
+    type = "website"
+  } = Astro2.props;
+  const currentUrl = Astro2.url.href;
+  const currentPath = Astro2.url.pathname;
+  function getLocalizedUrl(targetLang) {
+    const baseUrl = Astro2.site || "https://jidaisya.pages.dev";
+    let path = currentPath;
+    if (lang !== "zh-tw") {
+      path = path.replace(new RegExp(`^/${lang}`), "") || "/";
+    }
+    if (targetLang === "zh-tw") {
+      return `${baseUrl}${path === "/" ? "" : path}`;
+    }
+    return `${baseUrl}/${targetLang}${path === "/" ? "" : path}`;
+  }
+  const languages = [
+    { code: "zh-tw", name: "\u7E41\u9AD4\u4E2D\u6587" },
+    { code: "zh-cn", name: "\u7B80\u4F53\u4E2D\u6587" },
+    { code: "ja", name: "\u65E5\u672C\u8A9E" },
+    { code: "en", name: "English" }
+  ];
+  return renderTemplate(_c || (_c = __template$1(["<html", '> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- Primary Meta Tags --><title>', '</title><meta name="title"', '><meta name="description"', ">", '<!-- Canonical URL --><link rel="canonical"', "><!-- Hreflang Links -->", '<link rel="alternate" hreflang="x-default"', '><!-- Open Graph / Facebook --><meta property="og:type"', '><meta property="og:url"', '><meta property="og:title"', '><meta property="og:description"', '><meta property="og:site_name" content="\u6642\u4EE3\u793E"><meta property="og:locale"', ">", "", "", "", '<!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url"', '><meta property="twitter:title"', '><meta property="twitter:description"', ">", '<!-- Favicon --><link rel="icon" href="/favicon.ico" sizes="any"><!-- Structured Data --><script type="application/ld+json">\n      {\n        "@context": "https://schema.org",\n        "@type": "Organization",\n        "name": "\u6642\u4EE3\u793E",\n        "description": "\u5C08\u6CE8\u4E2D\u570B\u8FD1\u73FE\u7576\u4EE3\u7814\u7A76\u7684\u6B0A\u5A01\u5B78\u8853\u8457\u4F5C\u51FA\u7248\u8207\u50B3\u64AD",\n        "url": "https://jidaisya.pages.dev",\n        "logo": "https://jidaisya.pages.dev/images/brand/logo.png",\n        "sameAs": [],\n        "address": {\n          "@type": "PostalAddress",\n          "streetAddress": "\u795E\u6236\u5E02\u7058\u5340\u7BE0\u539F\u53F011-12",\n          "postalCode": "657-0016",\n          "addressCountry": "JP"\n        },\n        "contactPoint": {\n          "@type": "ContactPoint",\n          "email": "oukawk@yahoo.co.jp",\n          "contactType": "customer service"\n        }\n      }\n    <\/script>', "<!-- Breadcrumb Structured Data -->", "", '</head> <body class="min-h-screen"> ', ' <main class="container pt-24 pb-8"> ', " </main> ", " </body></html>"])), addAttribute(lang, "lang"), title, addAttribute(title, "content"), addAttribute(description, "content"), author && renderTemplate`<meta name="author"${addAttribute(author, "content")}>`, addAttribute(currentUrl, "href"), languages.map(({ code }) => renderTemplate`<link rel="alternate"${addAttribute(code, "hreflang")}${addAttribute(getLocalizedUrl(code), "href")}>`), addAttribute(getLocalizedUrl("zh-tw"), "href"), addAttribute(type, "content"), addAttribute(currentUrl, "content"), addAttribute(title, "content"), addAttribute(description, "content"), addAttribute(lang === "zh-tw" ? "zh_TW" : lang === "zh-cn" ? "zh_CN" : lang === "ja" ? "ja_JP" : "en_US", "content"), image && renderTemplate`<meta property="og:image"${addAttribute(image, "content")}>`, image && renderTemplate`<meta property="og:image:alt"${addAttribute(title, "content")}>`, publishedDate && renderTemplate`<meta property="article:published_time"${addAttribute(publishedDate, "content")}>`, author && renderTemplate`<meta property="article:author"${addAttribute(author, "content")}>`, addAttribute(currentUrl, "content"), addAttribute(title, "content"), addAttribute(description, "content"), image && renderTemplate`<meta property="twitter:image"${addAttribute(image, "content")}>`, type === "article" && renderTemplate(_a$1 || (_a$1 = __template$1(['<script type="application/ld+json">\n        {\n          "@context": "https://schema.org",\n          "@type": "Article",\n          "headline": "{title}",\n          "description": "{description}",\n          "url": "{currentUrl}",\n          "author": {\n            "@type": "Person",\n            "name": "{author}"\n          },\n          "publisher": {\n            "@type": "Organization",\n            "name": "\u6642\u4EE3\u793E",\n            "logo": {\n              "@type": "ImageObject",\n              "url": "https://jidaisya.pages.dev/images/brand/logo.png"\n            }\n          },\n          "datePublished": "{publishedDate}",\n          "mainEntityOfPage": {\n            "@type": "WebPage",\n            "@id": "{currentUrl}"\n          }\n        }\n      <\/script>']))), currentPath !== "/" && renderTemplate(_b || (_b = __template$1(['<script type="application/ld+json">\n        {\n          "@context": "https://schema.org",\n          "@type": "BreadcrumbList",\n          "itemListElement": [\n            {\n              "@type": "ListItem",\n              "position": 1,\n              "name": "\u9996\u9801",\n              "item": "{getLocalizedUrl(lang)}"\n            }\n          ]\n        }\n      <\/script>']))), renderHead(), renderSlot($$result, $$slots["header"]), renderSlot($$result, $$slots["default"]), renderSlot($$result, $$slots["footer"]));
 }, "/Users/Suro/Documents/ak/\u72EC\u7ACB\u5F00\u53D1\u9879\u76EE/jidaisya/src/layouts/BaseLayout.astro", void 0);
 
 var __freeze = Object.freeze;

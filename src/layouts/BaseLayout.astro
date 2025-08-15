@@ -1,13 +1,156 @@
 ---
 import '../styles/global.css';
-const { title = '時代社', lang = 'zh' } = Astro.props;
+
+const { 
+  title = '時代社', 
+  description = '專注中國近現當代研究的權威學術著作出版與傳播', 
+  lang = 'zh-tw',
+  image,
+  author,
+  publishedDate,
+  type = 'website'
+} = Astro.props;
+
+// 获取当前页面的完整URL和路径
+const currentUrl = Astro.url.href;
+const currentPath = Astro.url.pathname;
+
+// 生成语言版本的URL
+function getLocalizedUrl(targetLang: string) {
+  const baseUrl = Astro.site || 'https://jidaisya.pages.dev';
+  let path = currentPath;
+  
+  // 移除当前语言前缀
+  if (lang !== 'zh-tw') {
+    path = path.replace(new RegExp(`^/${lang}`), '') || '/';
+  }
+  
+  // 添加目标语言前缀
+  if (targetLang === 'zh-tw') {
+    return `${baseUrl}${path === '/' ? '' : path}`;
+  }
+  return `${baseUrl}/${targetLang}${path === '/' ? '' : path}`;
+}
+
+const languages = [
+  { code: 'zh-tw', name: '繁體中文' },
+  { code: 'zh-cn', name: '简体中文' },
+  { code: 'ja', name: '日本語' },
+  { code: 'en', name: 'English' }
+];
 ---
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    {author && <meta name="author" content={author} />}
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={currentUrl} />
+    
+    <!-- Hreflang Links -->
+    {languages.map(({ code }) => (
+      <link rel="alternate" hreflang={code} href={getLocalizedUrl(code)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={getLocalizedUrl('zh-tw')} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="時代社" />
+    <meta property="og:locale" content={lang === 'zh-tw' ? 'zh_TW' : lang === 'zh-cn' ? 'zh_CN' : lang === 'ja' ? 'ja_JP' : 'en_US'} />
+    {image && <meta property="og:image" content={image} />}
+    {image && <meta property="og:image:alt" content={title} />}
+    {publishedDate && <meta property="article:published_time" content={publishedDate} />}
+    {author && <meta property="article:author" content={author} />}
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={currentUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    {image && <meta property="twitter:image" content={image} />}
+    
+    <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "時代社",
+        "description": "專注中國近現當代研究的權威學術著作出版與傳播",
+        "url": "https://jidaisya.pages.dev",
+        "logo": "https://jidaisya.pages.dev/images/brand/logo.png",
+        "sameAs": [],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "神戶市灘區篠原台11-12",
+          "postalCode": "657-0016",
+          "addressCountry": "JP"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "oukawk@yahoo.co.jp",
+          "contactType": "customer service"
+        }
+      }
+    </script>
+    
+    {type === 'article' && (
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "{title}",
+          "description": "{description}",
+          "url": "{currentUrl}",
+          "author": {
+            "@type": "Person",
+            "name": "{author}"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "時代社",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://jidaisya.pages.dev/images/brand/logo.png"
+            }
+          },
+          "datePublished": "{publishedDate}",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{currentUrl}"
+          }
+        }
+      </script>
+    )}
+    
+    <!-- Breadcrumb Structured Data -->
+    {currentPath !== '/' && (
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首頁",
+              "item": "{getLocalizedUrl(lang)}"
+            }
+          ]
+        }
+      </script>
+    )}
   </head>
   <body class="min-h-screen">
     <slot name="header" />

@@ -4,7 +4,14 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 ---
 
-<BaseLayout title="中国的叙拉古与柏拉图 - 王力雄 | 时代社" lang="zh-cn">
+<BaseLayout 
+  title="中国的叙拉古与柏拉图 - 王力雄 | 时代社"
+  description="探讨毛、邓、薄现象与中国问题实质，改革幻想破灭背后不为人知的故事，王力雄对中国现实的深刻思考和心路历程。"
+  lang="zh-cn"
+  type="article"
+  author="王力雄"
+  image="https://jidaisya.pages.dev/images/books/china-syracuse-plato.jpg"
+>
   <Fragment slot="header"><Header lang="zh-cn" /></Fragment>
   
   <main class="container py-8">
@@ -40,6 +47,9 @@ import Footer from '../../../components/Footer.astro';
                   src="/images/books/china-syracuse-plato.jpg" 
                   alt="中国的叙拉古与柏拉图 书籍封面" 
                   class="w-full h-full object-cover"
+                  width="300"
+                  height="400"
+                  loading="lazy"
                 />
               </div>
               <div class="mt-6 space-y-3">
@@ -94,9 +104,23 @@ import Footer from '../../../components/Footer.astro';
               <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">作者简介</h2>
               <div class="bg-blue-50 rounded-lg p-6">
                 <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-                  <p>
-                    <strong>王力雄</strong>，中国著名作家，1953年生，籍贯山东，汉族，现居北京。
-                  </p>
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-100 flex-shrink-0">
+                      <img 
+                        src="/images/authors/wanglx.jpg" 
+                        alt="王力雄" 
+                        class="w-full h-full object-cover"
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <p class="mb-0">
+                        <strong>王力雄</strong>，中国著名作家，1953年生，籍贯山东，汉族，现居北京。
+                      </p>
+                    </div>
+                  </div>
                   <p>
                     1991年以"保密"为名，在台湾和加拿大同时出版长篇政治小说《黄祸》，开辟了结合当代科技背景推演当今中国政治进程和前景的小说新形式，以其宏大的视野、深刻的社会关怀和科学的分析影响了一代中国人，入选亚洲周刊20世纪中文小说100强。
                   </p>

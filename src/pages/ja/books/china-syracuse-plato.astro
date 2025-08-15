@@ -4,7 +4,14 @@ import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 ---
 
-<BaseLayout title="中国のシラクサとプラトン - 王力雄 | 時代社" lang="ja">
+<BaseLayout 
+  title="中国のシラクサとプラトン - 王力雄 | 時代社"
+  description="毛、鄧、薄現象と中国問題の本質、改革幻想破滅の裏に隠された知られざる物語、王力雄の中国現実に対する深い思考と心の軌跡。"
+  lang="ja"
+  type="article"
+  author="王力雄"
+  image="https://jidaisya.pages.dev/images/books/china-syracuse-plato.jpg"
+>
   <Fragment slot="header"><Header lang="ja" /></Fragment>
   
   <main class="container py-8">
@@ -40,6 +47,9 @@ import Footer from '../../../components/Footer.astro';
                   src="/images/books/china-syracuse-plato.jpg" 
                   alt="中国のシラクサとプラトン 書籍表紙" 
                   class="w-full h-full object-cover"
+                  width="300"
+                  height="400"
+                  loading="lazy"
                 />
               </div>
               <div class="mt-6 space-y-3">
@@ -50,6 +60,14 @@ import Footer from '../../../components/Footer.astro';
                     <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">政治思想</span>
                     <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">現代中国</span>
                     <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">社会観察</span>
+                  </div>
+                  
+                  <!-- 書籍情報 -->
+                  <div class="mt-6 text-sm text-gray-600 space-y-1">
+                    <p><span class="font-medium">ISBN:</span> 9784990601713</p>
+                    <p><span class="font-medium">判型:</span> 四六版210ページ</p>
+                    <p><span class="font-medium">出版:</span> 2025年2月</p>
+                    <p><span class="font-medium">定価:</span> 2,200円＋税</p>
                   </div>
                 </div>
               </div>
@@ -63,7 +81,10 @@ import Footer from '../../../components/Footer.astro';
               <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">内容紹介</h2>
               <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
                 <p class="text-lg">
-                  毛、鄧、薄現象と中国問題の本質、改革幻想破滅の裏に隠された知られざる物語、趙紫陽による『黄禍』への注目、中国運命三部作、劉暁波の詩『力雄に寄せて』。この書籍は、文学創作、政治研究と実践、民族和解と人類と自然の共生を探求する現代中国の思想家——王力雄先生の中国現実に対する深い思考と心の軌跡を全面的に示している。
+                  王力雄氏は現代中国の著名な作家と思想家であり、政治小説『黄禍』と『セレモニー』でいち早くハイテクを利用して全体主義政権を作り、国民を完全に監視し、世界に挑戦する中国の行方を予測し、またダライ・ラマの転生をめぐる中国当局のやり方でチベット問題は一層混迷することも予測している。
+                </p>
+                <p class="text-lg">
+                  本書は、王力雄氏による数十年間にわたって中国の社会、政治と民族問題についての観察と思考の集大成であり、「毛沢東思想」と「鄧小平理論」の欺瞞性、薄熙来事件と派閥政治、政治改革幻想の崩壊過程、中国における民主化、民族和解のプロセスについての深い思考など、現代中国が抱えている様々な問題についての深い洞察を余すことなく描き出している。
                 </p>
               </div>
             </section>
@@ -94,9 +115,23 @@ import Footer from '../../../components/Footer.astro';
               <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">著者紹介</h2>
               <div class="bg-blue-50 rounded-lg p-6">
                 <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-                  <p>
-                    <strong>王力雄</strong>、中国の著名な作家、1953年生まれ、山東省出身、漢族、現在北京在住。
-                  </p>
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-100 flex-shrink-0">
+                      <img 
+                        src="/images/authors/wanglx.jpg" 
+                        alt="王力雄" 
+                        class="w-full h-full object-cover"
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <p class="mb-0">
+                        <strong>王力雄</strong>、中国の著名な作家、1953年生まれ、山東省出身、漢族、現在北京在住。
+                      </p>
+                    </div>
+                  </div>
                   <p>
                     1991年に「秘密」の名で台湾とカナダで同時に長編政治小説『黄禍』を出版し、現代科学技術を背景に今日の中国政治プロセスと展望を推演する小説の新形式を開拓。その壮大な視野、深刻な社会への関心と科学的分析で一世代の中国人に影響を与え、アジア週刊20世紀中文小説100選に選出された。
                   </p>

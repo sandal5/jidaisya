@@ -4,7 +4,14 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 ---
 
-<BaseLayout title="中國的叙拉古與柏拉圖 - 王力雄 | 時代社">
+<BaseLayout 
+  title="中國的叙拉古與柏拉圖 - 王力雄 | 時代社"
+  description="探討毛、鄧、薄現象與中國問題實質，改革幻想破滅背後不為人知的故事，王力雄對中國現實的深刻思考和心路歷程。"
+  lang="zh-tw"
+  type="article"
+  author="王力雄"
+  image="https://jidaisya.pages.dev/images/books/china-syracuse-plato.jpg"
+>
   <Fragment slot="header"><Header lang="zh-tw" /></Fragment>
   
   <main class="container py-8">
@@ -40,6 +47,9 @@ import Footer from '../../components/Footer.astro';
                   src="/images/books/china-syracuse-plato.jpg" 
                   alt="中國的叙拉古與柏拉圖 書籍封面" 
                   class="w-full h-full object-cover"
+                  width="300"
+                  height="400"
+                  loading="lazy"
                 />
               </div>
               <div class="mt-6 space-y-3">
@@ -94,9 +104,23 @@ import Footer from '../../components/Footer.astro';
               <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">作者簡介</h2>
               <div class="bg-blue-50 rounded-lg p-6">
                 <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
-                  <p>
-                    <strong>王力雄</strong>，中國著名作家，1953年生，籍貫山東，漢族，現居北京。
-                  </p>
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-100 flex-shrink-0">
+                      <img 
+                        src="/images/authors/wanglx.jpg" 
+                        alt="王力雄" 
+                        class="w-full h-full object-cover"
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <p class="mb-0">
+                        <strong>王力雄</strong>，中國著名作家，1953年生，籍貫山東，漢族，現居北京。
+                      </p>
+                    </div>
+                  </div>
                   <p>
                     1991年以"保密"為名，在台灣和加拿大同時出版長篇政治小說《黃禍》，開闢了結合當代科技背景推演當今中國政治進程和前景的小說新形式，以其宏大的視野、深刻的社會關懷和科學的分析影響了一代中國人，入選亞洲周刊20世紀中文小說100強。
                   </p>
