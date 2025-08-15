@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jidaisya.pages.dev/sitemap.xml
+
+# Disallow sensitive paths
+Disallow: /_astro/
+Disallow: /admin/
+Disallow: /.git/

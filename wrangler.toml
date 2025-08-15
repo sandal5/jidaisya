@@ -1,0 +1,9 @@
+name = "jidaisya"
+compatibility_date = "2024-05-30"
+
+# Production environment configuration
+[env.production]
+build = { command = "pnpm install && pnpm run build", cwd = ".", watch_dir = "src" }
+
+# Pages configuration
+pages_build_output_dir = "dist"

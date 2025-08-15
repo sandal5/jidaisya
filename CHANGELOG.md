@@ -1,3 +1,23 @@
+## Alpha-0.9 — 2025-08-15 16:25
+- 重构：按照Astro最佳实践重组项目目录结构
+- 优化：图片资源移动到语义化路径（/images/books/, /images/brand/）
+- 更新：所有图片引用路径使用语义化命名（china-syracuse-plato.jpg等）
+- 安全：增强安全头配置，添加CSP、权限策略和缓存控制
+- SEO：添加robots.txt和多语言sitemap.xml
+- 配置：优化astro.config.mjs生产环境设置，修复构建警告
+- 配置：简化wrangler.toml，专注于Pages部署
+- 清理：删除未使用的设计资源文件夹
+- 验证：构建成功，23个页面，目录结构规范
+
+## Alpha-0.8 — 2025-08-15 16:19
+- 修复：Cloudflare Pages部署404问题
+- 新增：wrangler.toml配置文件，指定构建命令和输出目录
+- 新增：GitHub Actions自动化部署工作流 (.github/workflows/deploy.yml)
+- 更新：astro.config.mjs添加静态输出配置和网站URL
+- 新增：_headers文件设置安全策略和MIME类型
+- 新增：_redirects文件处理客户端路由
+- 验证：本地构建成功，生成23个静态页面
+
 ## Alpha-0.7 — 2025-08-15 16:04
 - 统一：按照英文版本的样式更新了所有语言的books页面，包含完整的书籍介绍、分类浏览和图片展示
 - 同步：按照繁体中文首页的布局同步了所有语言的首页，添加了"精选书籍"展示区域
