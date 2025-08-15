@@ -150,21 +150,4 @@ const currentNav = navItems[lang] || navItems['zh-tw'];
 
 <script src="/js/mobile-menu.js" is:inline></script>
 <script src="/js/sticky-header.js" is:inline></script>
-<script is:inline>
-  const ls = document.getElementById('lang-switcher');
-  if (ls) {
-    const btn = ls.querySelector('button');
-    const menu = ls.querySelector('ul');
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const open = menu.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', (!open).toString());
-    });
-    document.addEventListener('click', (e) => {
-      if (!ls.contains(e.target)) {
-        menu.classList.add('hidden');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-</script>
+<script src="/js/language-switcher.js" is:inline></script>
