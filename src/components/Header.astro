@@ -73,12 +73,32 @@ const currentNav = navItems[lang] || navItems['zh-tw'];
 
     <!-- Language Switcher & Mobile Menu Button -->
     <div class="flex items-center gap-2">
-      <!-- Language Switcher -->
-      <div class="hidden sm:flex items-center gap-1">
-        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'zh-tw' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('zh-tw')}>TW</a>
-        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'zh-cn' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('zh-cn')}>CN</a>
-        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'ja' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('ja')}>JP</a>
-        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'en' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('en')}>EN</a>
+      <!-- 紧凑语言选择器（替换桌面端的四个链接） -->
+      <div class="hidden sm:flex items-center relative" id="lang-switcher">
+        <button
+          class="text-sm px-3 py-1 rounded border hover:bg-gray-50 flex items-center gap-1"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+        >
+          <!-- 地球图标 -->
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M3 12h18M12 3c2.5 2.8 2.5 14.2 0 18M8 5.5c2 .8 6 .8 8 0M8 18.5c2-.8 6-.8 8 0" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+          <span class="hidden md:inline">
+            {lang === 'zh-tw' ? '繁體中文' : lang === 'zh-cn' ? '简体中文' : lang === 'ja' ? '日本語' : 'English'}
+          </span>
+        </button>
+
+        <ul
+          class="absolute right-0 top-full mt-2 w-36 border bg-white rounded-md shadow-lg p-1 hidden"
+          role="listbox"
+        >
+          <li><a class="block px-3 py-2 rounded hover:bg-gray-50" href={getLocalizedPath('zh-tw')} hreflang="zh-tw" lang="zh-Hant">繁體中文</a></li>
+          <li><a class="block px-3 py-2 rounded hover:bg-gray-50" href={getLocalizedPath('zh-cn')} hreflang="zh-cn" lang="zh-Hans">简体中文</a></li>
+          <li><a class="block px-3 py-2 rounded hover:bg-gray-50" href={getLocalizedPath('ja')} hreflang="ja" lang="ja">日本語</a></li>
+          <li><a class="block px-3 py-2 rounded hover:bg-gray-50" href={getLocalizedPath('en')} hreflang="en" lang="en">English</a></li>
+        </ul>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -130,3 +150,21 @@ const currentNav = navItems[lang] || navItems['zh-tw'];
 
 <script src="/js/mobile-menu.js" is:inline></script>
 <script src="/js/sticky-header.js" is:inline></script>
+<script is:inline>
+  const ls = document.getElementById('lang-switcher');
+  if (ls) {
+    const btn = ls.querySelector('button');
+    const menu = ls.querySelector('ul');
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = menu.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', (!open).toString());
+    });
+    document.addEventListener('click', (e) => {
+      if (!ls.contains(e.target)) {
+        menu.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>
