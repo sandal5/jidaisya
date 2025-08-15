@@ -41,7 +41,10 @@ const currentNav = navItems[lang] || navItems['zh-tw'];
     <!-- Logo -->
     <a href={getPath('/')} class="flex items-center gap-2 z-50 relative">
       <img src="/images/brand/logo.png" alt="時代社 JIDAISYA" class="h-16 w-auto" />
-      <span class="font-semibold text-[18px] text-[color:var(--brand-primary)] hidden sm:inline">時代社 JIDAISYA</span>
+      <span class="font-semibold text-[18px] text-[color:var(--brand-primary)] block sm:inline">
+        <span class="block sm:inline">時代社</span>
+        <span class="hidden sm:inline"> JIDAISYA</span>
+      </span>
     </a>
 
     <!-- Desktop Navigation -->
