@@ -1,3 +1,10 @@
+## Alpha-1.6 — 2025-08-15 18:55
+- 修复：解决Cloudflare Pages CSP违规问题，移动端菜单现在可在生产环境正常使用
+- 架构：将内联JavaScript移动到外部文件(/js/mobile-menu.js)，符合现代Web安全标准
+- 兼容：使用is:inline指令确保外部脚本正确加载，避免打包冲突
+- 部署：外部脚本文件已正确复制到dist目录，支持生产环境部署
+- 安全：消除了CSP(Content Security Policy)安全警告，提升网站安全性
+
 ## Alpha-1.5 — 2025-08-15 18:18
 - 修复：彻底解决移动端弹出菜单无法使用的问题
 - 简化：移除复杂的transform动画，改用opacity和visibility切换
