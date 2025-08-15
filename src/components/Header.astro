@@ -6,6 +6,22 @@ const getPath = (path: string) => {
   return `/${lang}${path}`;
 };
 
+// 获取当前页面路径用于语言切换
+const currentPath = Astro.url.pathname;
+const getLocalizedPath = (targetLang: string) => {
+  // 移除当前语言前缀
+  let path = currentPath;
+  if (lang !== 'zh-tw') {
+    path = path.replace(new RegExp(`^/${lang}`), '') || '/';
+  }
+  
+  // 添加目标语言前缀
+  if (targetLang === 'zh-tw') {
+    return path === '/' ? '/' : path;
+  }
+  return `/${targetLang}${path === '/' ? '' : path}`;
+};
+
 const navItems = {
   'zh-tw': {
     books: '書籍',
@@ -36,7 +52,7 @@ const navItems = {
 const currentNav = navItems[lang] || navItems['zh-tw'];
 ---
 
-<header class="border-b bg-white relative">
+<header class="fixed top-0 left-0 right-0 z-50 border-b bg-white/95 backdrop-blur-sm transition-all duration-300" id="main-header">
   <div class="container flex items-center justify-between h-20">
     <!-- Logo -->
     <a href={getPath('/')} class="flex items-center gap-2 z-50 relative">
@@ -59,10 +75,10 @@ const currentNav = navItems[lang] || navItems['zh-tw'];
     <div class="flex items-center gap-2">
       <!-- Language Switcher -->
       <div class="hidden sm:flex items-center gap-1">
-        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'zh-tw' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/">TW</a>
-        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'zh-cn' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/zh-cn">CN</a>
-        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'ja' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/ja">JP</a>
-        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'en' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/en">EN</a>
+        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'zh-tw' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('zh-tw')}>TW</a>
+        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'zh-cn' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('zh-cn')}>CN</a>
+        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'ja' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('ja')}>JP</a>
+        <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'en' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('en')}>EN</a>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -102,10 +118,10 @@ const currentNav = navItems[lang] || navItems['zh-tw'];
       <div class="border-t pt-4">
         <p class="px-4 text-sm text-gray-600 mb-3">Language / 語言</p>
         <div class="grid grid-cols-2 gap-2 px-4">
-          <a class={`text-sm px-3 py-2 rounded text-center transition-colors ${lang === 'zh-tw' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/">繁體中文</a>
-          <a class={`text-sm px-3 py-2 rounded text-center transition-colors ${lang === 'zh-cn' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/zh-cn">简体中文</a>
-          <a class={`text-sm px-3 py-2 rounded text-center transition-colors ${lang === 'ja' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/ja">日本語</a>
-          <a class={`text-sm px-3 py-2 rounded text-center transition-colors ${lang === 'en' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/en">English</a>
+          <a class={`text-sm px-3 py-2 rounded text-center transition-colors ${lang === 'zh-tw' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('zh-tw')}>繁體中文</a>
+          <a class={`text-sm px-3 py-2 rounded text-center transition-colors ${lang === 'zh-cn' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('zh-cn')}>简体中文</a>
+          <a class={`text-sm px-3 py-2 rounded text-center transition-colors ${lang === 'ja' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('ja')}>日本語</a>
+          <a class={`text-sm px-3 py-2 rounded text-center transition-colors ${lang === 'en' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href={getLocalizedPath('en')}>English</a>
         </div>
       </div>
     </div>
@@ -113,3 +129,4 @@ const currentNav = navItems[lang] || navItems['zh-tw'];
 </header>
 
 <script src="/js/mobile-menu.js" is:inline></script>
+<script src="/js/sticky-header.js" is:inline></script>

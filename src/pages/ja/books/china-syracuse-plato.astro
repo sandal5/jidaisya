@@ -1,0 +1,206 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+
+<BaseLayout title="中国のシラクサとプラトン - 王力雄 | 時代社" lang="ja">
+  <Fragment slot="header"><Header lang="ja" /></Fragment>
+  
+  <main class="container py-8">
+    <!-- パンくずナビゲーション -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center space-x-2 text-sm text-gray-600">
+        <li>
+          <a href="/ja" class="hover:text-blue-600 transition-colors">ホーム</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <a href="/ja/books" class="hover:text-blue-600 transition-colors">書籍</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-gray-900 font-medium">中国のシラクサとプラトン</span>
+        </li>
+      </ol>
+    </nav>
+    <!-- 書籍タイトル領域 -->
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <!-- 書籍表紙 -->
+          <div class="lg:col-span-1">
+            <div class="sticky top-8">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-2xl">
+                <img 
+                  src="/images/books/china-syracuse-plato.jpg" 
+                  alt="中国のシラクサとプラトン 書籍表紙" 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="mt-6 space-y-3">
+                <div class="text-center">
+                  <h1 class="text-2xl font-serif font-bold text-gray-900 mb-2">中国のシラクサとプラトン</h1>
+                  <p class="text-lg text-gray-600 mb-4">王力雄 著</p>
+                  <div class="flex flex-wrap gap-2 justify-center">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">政治思想</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">現代中国</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">社会観察</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 書籍詳細内容 -->
+          <div class="lg:col-span-2 space-y-10">
+            <!-- 内容紹介 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">内容紹介</h2>
+              <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                  毛、鄧、薄現象と中国問題の本質、改革幻想破滅の裏に隠された知られざる物語、趙紫陽による『黄禍』への注目、中国運命三部作、劉暁波の詩『力雄に寄せて』。この書籍は、文学創作、政治研究と実践、民族和解と人類と自然の共生を探求する現代中国の思想家——王力雄先生の中国現実に対する深い思考と心の軌跡を全面的に示している。
+                </p>
+              </div>
+            </section>
+
+            <!-- 目次 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">目次</h2>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <ol class="space-y-2 text-gray-700">
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">序言</span> 政治分子が政治に遭遇する時</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第1章</span> 毛沢東主義と人間天国</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第2章</span> 「鄧小平理論」と底辺毛沢東</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第3章</span> 薄熙来と「Nシリーズ」</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第4章</span> 超越者同盟でエリート同盟を突破</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第5章</span> 漸進組織で民族理性を抽出</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第6章</span> ダライ・ラマの死と再生</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第7章</span> 崩壊がメカニズムとなり、運命となる</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第8章</span> 中国運命三部作：大典・黄禍・転生</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第9章</span> 世界には方法が必要</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第10章</span> 火星人類のための新型民主主義を求めて</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">代あとがき</span> 劉暁波：『政治幻想狂—力雄に寄せて』</li>
+                </ol>
+              </div>
+            </section>
+
+            <!-- 著者紹介 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">著者紹介</h2>
+              <div class="bg-blue-50 rounded-lg p-6">
+                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                  <p>
+                    <strong>王力雄</strong>、中国の著名な作家、1953年生まれ、山東省出身、漢族、現在北京在住。
+                  </p>
+                  <p>
+                    1991年に「秘密」の名で台湾とカナダで同時に長編政治小説『黄禍』を出版し、現代科学技術を背景に今日の中国政治プロセスと展望を推演する小説の新形式を開拓。その壮大な視野、深刻な社会への関心と科学的分析で一世代の中国人に影響を与え、アジア週刊20世紀中文小説100選に選出された。
+                  </p>
+                  <p>
+                    王力雄は長期にわたり中国がいかに政治体制変革を実現できるかという問題を研究し、激しい大規模な社会衝突を避け、普遍的価値を認め人民が真に自由と幸福を得られる近代国家への平和的移行を目指すことが、その政治小説創作の出発点である。
+                  </p>
+                  <div class="mt-4">
+                    <h4 class="font-semibold text-gray-900 mb-2">主要著作：</h4>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                      <li>『権力溶解——層次選出制』(明鏡出版社、1998)</li>
+                      <li>『天葬——チベットの運命』(明鏡出版社、1998)</li>
+                      <li>『漸進民主』（台湾大塊文化、2006）</li>
+                      <li>『我的西域、君的東土』（大塊文化、2007）</li>
+                      <li>『権民一体論』（台湾大塊文化、2016）</li>
+                      <li>『大典』（台湾大塊文化、2017）</li>
+                      <li>『転生』（台湾雪域出版社、2020）</li>
+                    </ul>
+                  </div>
+                  <div class="mt-4">
+                    <h4 class="font-semibold text-gray-900 mb-2">受賞歴：</h4>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                      <li>2002年中文独立ペンクラブ創作自由賞受賞</li>
+                      <li>2003年Hellman-Hammett賞受賞</li>
+                      <li>2009年ダライ・ラマより真理の光賞受賞</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 専門家推薦 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">専門家推薦</h2>
+              <div class="bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg p-6">
+                <blockquote class="text-lg italic text-gray-700 leading-relaxed">
+                  「現代中国語思想において、王力雄先生は30年以上にわたって独特で深みのある声を発し続け、20世紀以来の現代中国の文学作家が同時に政治思想家の使命を担うという伝統を継承している。特に民族問題への関心と洞察は注目に値する。本書は習近平政権発足当初、著者自身が『政治に遭遇』し『暴政を変える』ことを試みた経緯と思考を記録しており、それは毛沢東後の中国社会全体の『改革のジレンマ』の最後の現れと見ることができ、中国の未来の方向性を見極める上で特別な価値を持つ。」
+                </blockquote>
+                <cite class="block mt-4 text-right text-gray-600 not-italic">
+                  ——呉国光（アメリカ・スタンフォード大学中国経済制度研究センター上級研究員）
+                </cite>
+              </div>
+            </section>
+
+            <!-- 序言抜粋 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">序言抜粋</h2>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="font-semibold text-gray-900 mb-3">政治分子が政治に遭遇する時</h3>
+                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                  <p>
+                    私のシラクサ行きは、様々な機縁巧合と具体的状況が原因であったが、確かにこうした潜在的推進力があった——中共新体制への期待である。2012年中共第18回大会で習近平が総書記に就任し、当時の中央規律検査委員会書記王岐山と連携して大規模な反腐敗行動を起こし、当時民心を得て、二人の協力を「習王体制」と呼んだ。
+                  </p>
+                  <p>
+                    中国では、我々は「知識分子が政治に遭遇」するのではなく、「政治分子が政治に遭遇」するのである。シラクサの目には、我々は常に「異議分子」「反動分子」「分裂分子」「扇動分子」「敵対分子」……である。要するに全て政治に関わる分子であり、知識分子というより政治分子と言う方が正確である。そして政治分子にとって、政治は何ら誘惑ではなく、天職なのである。
+                  </p>
+                </div>
+                <div class="mt-4 text-right">
+                  <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">完全序言を読む →</a>
+                </div>
+              </div>
+            </section>
+
+            <!-- 関連作品 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">関連作品</h2>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white border rounded-lg p-4 hover:shadow-md transition-shadow">
+                  <h3 class="font-semibold text-gray-900 mb-2">『黄禍』</h3>
+                  <p class="text-sm text-gray-600 mb-3">予言的政治小説、アジア週刊20世紀中文小説100選入選</p>
+                  <span class="text-xs px-2 py-1 bg-orange-100 text-orange-800 rounded">古典作品</span>
+                </div>
+                <div class="bg-white border rounded-lg p-4 hover:shadow-md transition-shadow">
+                  <h3 class="font-semibold text-gray-900 mb-2">『天葬——チベットの運命』</h3>
+                  <p class="text-sm text-gray-600 mb-3">漢人が書いたチベット問題で最も影響力のある著作</p>
+                  <span class="text-xs px-2 py-1 bg-green-100 text-green-800 rounded">受賞作品</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        
+        <!-- ボトムナビゲーション -->
+        <div class="mt-12 pt-8 border-t">
+          <div class="flex justify-between items-center">
+            <a href="/ja/books" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors group">
+              <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              <span>書籍リストに戻る</span>
+            </a>
+            
+            <div class="flex gap-4">
+              <a href="/ja/submit" class="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                出版社に連絡
+              </a>
+              <a href="#" class="px-4 py-2 text-sm border border-gray-300 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors">
+                この本を購入
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>
