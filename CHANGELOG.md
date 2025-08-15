@@ -1,3 +1,13 @@
+## Alpha-1.0 — 2025-08-15 16:36
+- 修复：删除构建产物dist目录，避免版本控制冲突
+- 修复：交换judicial-goddess.jpg和china-syracuse-plato.jpg文件内容，使图片与书名匹配
+- 更新：所有页面使用完整书名和作者信息
+  - 跋涉中的司法女神 - 贺卫方/賀衛方/He Weifang
+  - 憲政與經濟/宪政与经济/憲政と経済/Constitution and Economics - 楊小凱/杨小凯/Yang Xiaokai
+  - 中国的叙拉古与柏拉图/China's Syracuse and Plato - 王力雄/Wang Lixiong
+- 优化：书籍展示添加作者信息行，提升内容完整性
+- 验证：构建成功，所有23个页面更新完毕
+
 ## Alpha-0.9 — 2025-08-15 16:25
 - 重构：按照Astro最佳实践重组项目目录结构
 - 优化：图片资源移动到语义化路径（/images/books/, /images/brand/）
