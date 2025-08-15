@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<BaseLayout title="联系我们 | 時代社" lang="zh-cn">
+  <Fragment slot="header"><Header lang="zh-cn" /></Fragment>
+  <section class="container py-8">
+    <h1 class="text-2xl font-semibold mb-4">联系我们</h1>
+    <p class="text-gray-600">一般咨询与合作洽谈。</p>
+  </section>
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

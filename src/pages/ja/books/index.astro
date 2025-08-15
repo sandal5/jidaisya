@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+<BaseLayout title="書籍 | 時代社" lang="ja">
+  <Fragment slot="header"><Header lang="ja" /></Fragment>
+  <section class="container py-12">
+    <h1 class="text-3xl font-serif mb-8">出版物のご紹介</h1>
+    
+    <!-- Series Introduction -->
+    <div class="bg-gradient-to-r from-blue-50 to-gray-50 p-8 rounded-lg mb-12">
+      <h2 class="text-2xl font-semibold mb-4">21世紀中国思想白書シリーズ</h2>
+      <p class="text-gray-700 leading-relaxed">
+        現代中国の政治思想、法制研究、立憲経済学を記録・分析した総合的なコレクション。各巻は現代中国理解を形成する批判的な視点と洞察を提供します。
+      </p>
+    </div>
+
+    <!-- Book Categories -->
+    <div class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">カテゴリー別の閲覧</h2>
+      <div class="flex flex-wrap gap-3">
+        <button class="px-4 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200">政治思想</button>
+        <button class="px-4 py-2 bg-green-100 text-green-700 rounded-lg hover:bg-green-200">法制研究</button>
+        <button class="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200">立憲経済学</button>
+        <button class="px-4 py-2 bg-orange-100 text-orange-700 rounded-lg hover:bg-orange-200">社会文化</button>
+      </div>
+    </div>
+
+    <!-- Featured Books -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Book 1 -->
+      <div class="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="h-48 bg-gray-200 flex items-center justify-center">
+          <img src="/2.jpg" alt="書籍カバー" class="h-full w-auto object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold mb-2">中国のシラクサとプラトン</h3>
+          <p class="text-sm text-gray-600 mb-2">著者：王力雄</p>
+          <p class="text-sm text-gray-700">中国現代政治思想の変遷の深層分析...</p>
+          <a href="#" class="text-blue-600 text-sm mt-2 inline-block hover:underline">詳しく見る →</a>
+        </div>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="h-48 bg-gray-200 flex items-center justify-center">
+          <img src="/3.jpg" alt="書籍カバー" class="h-full w-auto object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold mb-2">司法女神</h3>
+          <p class="text-sm text-gray-600 mb-2">著者：賀衛方</p>
+          <p class="text-sm text-gray-700">中国の司法改革と法の支配に関する批判的視点...</p>
+          <a href="#" class="text-blue-600 text-sm mt-2 inline-block hover:underline">詳しく見る →</a>
+        </div>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+        <div class="h-48 bg-gray-200 flex items-center justify-center">
+          <img src="/4.jpg" alt="書籍カバー" class="h-full w-auto object-cover">
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold mb-2">立憲経済学</h3>
+          <p class="text-sm text-gray-600 mb-2">著者：楊小凱</p>
+          <p class="text-sm text-gray-700">経済システムと立憲ガバナンスの交差点を探索...</p>
+          <a href="#" class="text-blue-600 text-sm mt-2 inline-block hover:underline">詳しく見る →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coming Soon -->
+    <div class="mt-12 text-center p-8 bg-gray-50 rounded-lg">
+      <h2 class="text-xl font-semibold mb-3">近日公開予定</h2>
+      <p class="text-gray-600">更なる書籍を近日公開予定です。最新刊行物にご期待ください。</p>
+    </div>
+  </section>
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

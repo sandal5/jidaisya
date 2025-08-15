@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<BaseLayout title="Contact | Jidaisya" lang="en">
+  <Fragment slot="header"><Header lang="en" /></Fragment>
+  <section class="container py-12 max-w-4xl">
+    <h1 class="text-3xl font-serif mb-8">Contact Us</h1>
+    
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Contact Information -->
+      <div class="bg-gray-50 rounded-lg p-6">
+        <h2 class="text-xl font-semibold mb-4">Contact Information</h2>
+        <div class="space-y-4 text-gray-700">
+          <div>
+            <h3 class="font-medium mb-1">Address</h3>
+            <p>11-12 Shinoharadai, Nada-ku,<br>Kobe City 657-0016, Japan</p>
+          </div>
+          <div>
+            <h3 class="font-medium mb-1">Email</h3>
+            <a href="mailto:katsuyokobe@gmail.com" class="text-blue-600 hover:underline">katsuyokobe@gmail.com</a>
+          </div>
+          <div>
+            <h3 class="font-medium mb-1">FAX</h3>
+            <p>+81-78-882-0353</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Hours & Support -->
+      <div class="bg-blue-50 rounded-lg p-6">
+        <h2 class="text-xl font-semibold mb-4">Business Support</h2>
+        <div class="space-y-4 text-gray-700">
+          <div>
+            <h3 class="font-medium mb-1">Business Hours</h3>
+            <p>Monday - Friday: 9:00 AM - 5:00 PM (JST)</p>
+          </div>
+          <div>
+            <h3 class="font-medium mb-1">Response Time</h3>
+            <p>We typically respond within 3 business days</p>
+          </div>
+          <div>
+            <h3 class="font-medium mb-1">Languages</h3>
+            <p>Chinese, Japanese, English</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inquiry Topics -->
+    <div class="mt-8">
+      <h2 class="text-xl font-semibold mb-4">Common Inquiries</h2>
+      <div class="bg-white border rounded-lg p-6">
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2">•</span>
+            <span>Book purchases and ordering</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2">•</span>
+            <span>Manuscript submissions</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2">•</span>
+            <span>Academic collaboration</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2">•</span>
+            <span>Media inquiries</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2">•</span>
+            <span>Publishing partnerships</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Quick Contact -->
+    <div class="mt-8 text-center p-6 bg-gradient-to-r from-blue-50 to-gray-50 rounded-lg">
+      <p class="text-gray-700 mb-4">For all inquiries, please email us at:</p>
+      <a href="mailto:katsuyokobe@gmail.com" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-xl">
+        <span class="mr-2">📧</span>
+        katsuyokobe@gmail.com
+      </a>
+    </div>
+  </section>
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<BaseLayout title="投稿案内 | 時代社" lang="ja">
+  <Fragment slot="header"><Header lang="ja" /></Fragment>
+  <section class="container py-12 max-w-4xl">
+    <h1 class="text-3xl font-serif mb-8">投稿案内</h1>
+    
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+      <h2 class="text-xl font-semibold mb-3">投稿方法</h2>
+      <p class="text-gray-700 mb-3">
+        原稿をメールでお送りください：
+      </p>
+      <a href="mailto:katsuyokobe@gmail.com" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-lg">
+        <span class="mr-2">📧</span>
+        katsuyokobe@gmail.com
+      </a>
+    </div>
+
+    <div class="space-y-8">
+      <!-- 投稿について -->
+      <div>
+        <h2 class="text-xl font-semibold mb-4">投稿について</h2>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2 mt-1">•</span>
+            <span>中国近現代の政治思想、法制研究、経済憲政、社会文化などの分野の学術著作を歓迎します</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2 mt-1">•</span>
+            <span>投稿作品はオリジナルで、他の出版社で発表されていないものに限ります</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2 mt-1">•</span>
+            <span>完成原稿または詳細な執筆計画をご提供ください</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2 mt-1">•</span>
+            <span>投稿受領後、30営業日以内にご返答いたします</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 必要書類 -->
+      <div>
+        <h2 class="text-xl font-semibold mb-4">必要書類</h2>
+        <div class="bg-gray-50 rounded-lg p-6">
+          <ol class="space-y-3 text-gray-700">
+            <li class="flex">
+              <span class="font-medium mr-3">1.</span>
+              <span>著者プロフィール（学術的背景、研究分野、主要業績）</span>
+            </li>
+            <li class="flex">
+              <span class="font-medium mr-3">2.</span>
+              <span>作品概要（3000字以内）</span>
+            </li>
+            <li class="flex">
+              <span class="font-medium mr-3">3.</span>
+              <span>目次案</span>
+            </li>
+            <li class="flex">
+              <span class="font-medium mr-3">4.</span>
+              <span>見本原稿（2-3章）</span>
+            </li>
+            <li class="flex">
+              <span class="font-medium mr-3">5.</span>
+              <span>完成予定日（未完成の場合）</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- お問い合わせ -->
+      <div class="border-t pt-8">
+        <h2 class="text-xl font-semibold mb-4">お問い合わせ</h2>
+        <div class="text-gray-700 space-y-2">
+          <p>ご不明な点がございましたら、以下までお気軽にお問い合わせください：</p>
+          <div class="flex items-center">
+            <span class="font-medium mr-2">メール：</span>
+            <a href="mailto:katsuyokobe@gmail.com" class="text-blue-600 hover:underline">katsuyokobe@gmail.com</a>
+          </div>
+          <div class="flex items-center">
+            <span class="font-medium mr-2">FAX：</span>
+            <span>+81-78-882-0353</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

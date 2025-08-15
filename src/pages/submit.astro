@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="學者投稿 | 時代社" lang="zh-tw">
+  <Fragment slot="header"><Header lang="zh-tw" /></Fragment>
+  <section class="container py-12 max-w-4xl">
+    <h1 class="text-3xl font-serif mb-8">學者投稿</h1>
+    
+    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+      <h2 class="text-xl font-semibold mb-3">投稿方式</h2>
+      <p class="text-gray-700 mb-3">
+        請將您的投稿材料發送至我們的郵箱：
+      </p>
+      <a href="mailto:katsuyokobe@gmail.com" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-lg">
+        <span class="mr-2">📧</span>
+        katsuyokobe@gmail.com
+      </a>
+    </div>
+
+    <div class="space-y-8">
+      <!-- 投稿須知 -->
+      <div>
+        <h2 class="text-xl font-semibold mb-4">投稿須知</h2>
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2 mt-1">•</span>
+            <span>我們歡迎中國近現當代政治思想、法制研究、經濟憲政、社會文化等領域的學術著作</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2 mt-1">•</span>
+            <span>投稿作品應為原創且未在其他出版社發表</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2 mt-1">•</span>
+            <span>請提供完整的書稿或詳細的寫作計劃</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2 mt-1">•</span>
+            <span>我們將在收到投稿後的30個工作日內給予回覆</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 投稿材料 -->
+      <div>
+        <h2 class="text-xl font-semibold mb-4">投稿材料要求</h2>
+        <div class="bg-gray-50 rounded-lg p-6">
+          <ol class="space-y-3 text-gray-700">
+            <li class="flex">
+              <span class="font-medium mr-3">1.</span>
+              <span>作者簡介（包括學術背景、研究領域、主要成就）</span>
+            </li>
+            <li class="flex">
+              <span class="font-medium mr-3">2.</span>
+              <span>作品概要（3000字以內）</span>
+            </li>
+            <li class="flex">
+              <span class="font-medium mr-3">3.</span>
+              <span>目錄大綱</span>
+            </li>
+            <li class="flex">
+              <span class="font-medium mr-3">4.</span>
+              <span>樣章（2-3章）</span>
+            </li>
+            <li class="flex">
+              <span class="font-medium mr-3">5.</span>
+              <span>預計完稿時間（如未完成）</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- 聯繫方式 -->
+      <div class="border-t pt-8">
+        <h2 class="text-xl font-semibold mb-4">聯繫我們</h2>
+        <div class="text-gray-700 space-y-2">
+          <p>如有任何疑問，歡迎通過以下方式聯繫我們：</p>
+          <div class="flex items-center">
+            <span class="font-medium mr-2">郵箱：</span>
+            <a href="mailto:katsuyokobe@gmail.com" class="text-blue-600 hover:underline">katsuyokobe@gmail.com</a>
+          </div>
+          <div class="flex items-center">
+            <span class="font-medium mr-2">傳真：</span>
+            <span>+81-78-882-0353</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

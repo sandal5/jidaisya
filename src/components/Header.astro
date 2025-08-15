@@ -1,0 +1,57 @@
+---
+const { lang = 'zh-tw' } = Astro.props;
+
+const getPath = (path: string) => {
+  if (lang === 'zh-tw') return path;
+  return `/${lang}${path}`;
+};
+
+const navItems = {
+  'zh-tw': {
+    books: '書籍',
+    news: '資訊',
+    about: '關於我們',
+    submit: '學者投稿'
+  },
+  'zh-cn': {
+    books: '书籍',
+    news: '资讯',
+    about: '关于我们',
+    submit: '学者投稿'
+  },
+  ja: {
+    books: '書籍',
+    news: 'ニュース',
+    about: '会社概要',
+    submit: '投稿案内'
+  },
+  en: {
+    books: 'Books',
+    news: 'News',
+    about: 'About',
+    submit: 'Submit'
+  }
+};
+
+const currentNav = navItems[lang] || navItems['zh-tw'];
+---
+<header class="border-b">
+  <div class="container flex items-center justify-between h-20">
+    <a href={getPath('/')} class="flex items-center gap-2">
+      <img src="/logo.png" alt="時代社 JIDAISYA" class="h-16 w-auto" />
+      <span class="font-semibold text-[18px] text-[color:var(--brand-primary)]">時代社 JIDAISYA</span>
+    </a>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href={getPath('/books')}>{currentNav.books}</a>
+      <a href={getPath('/news')}>{currentNav.news}</a>
+      <a href={getPath('/about')}>{currentNav.about}</a>
+      <a href={getPath('/submit')}>{currentNav.submit}</a>
+    </nav>
+    <div class="flex items-center gap-1">
+      <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'zh-tw' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/">TW</a>
+      <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'zh-cn' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/zh-cn">CN</a>
+      <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'ja' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/ja">JP</a>
+      <a class={`text-sm px-3 py-1 rounded transition-colors min-w-[50px] text-center ${lang === 'en' ? 'bg-blue-600 text-white' : 'border hover:bg-gray-50'}`} href="/en">EN</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<BaseLayout title="時代社 | 首页" lang="zh-cn">
+  <Fragment slot="header"><Header lang="zh-cn" /></Fragment>
+  <!-- 主标题区域 -->
+  <section class="container py-16">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-5xl font-serif mb-6">21世纪中国思想白皮书</h1>
+      <p class="text-xl text-gray-600 mb-2">学术出版</p>
+      <p class="text-gray-600 max-w-2xl mx-auto">专注中国近现当代研究的权威学术著作出版与传播</p>
+    </div>
+  </section>
+
+  <!-- 书籍展示区域 -->
+  <section class="bg-gray-50 py-16">
+    <div class="container">
+      <h2 class="text-2xl font-serif text-center mb-12">精选书籍</h2>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="/2.jpg" alt="书籍封面" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold mb-2 text-gray-800">中国的叙拉古与柏拉图</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">深入分析中国当代政治思想的演变</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="/3.jpg" alt="书籍封面" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold mb-2 text-gray-800">司法女神</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">关注司法制度改革与法治建设的重要著作</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="/4.jpg" alt="书籍封面" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold mb-2 text-gray-800">宪政经济学</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">探索市场经济与宪政体制的互动关系</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 发刊词区域 -->
+  <section class="bg-gradient-to-br from-gray-50 to-gray-100 py-16">
+    <div class="container max-w-4xl">
+      <div class="bg-white rounded-xl shadow-lg p-10">
+        <h2 class="text-2xl font-serif mb-6 text-center">发刊词</h2>
+        <div class="prose prose-lg max-w-none">
+          <p class="text-gray-700 leading-relaxed mb-6">
+            任何一个时代都有只能在那个时代中才能产生的思想，激荡的时代中更会出现深刻的思想。
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            日本当年走上战争道路，一个原因就是因为没有言论和出版的自由，人们无法表达自己的真实思想。为了东亚和世界的未来和平，時代社出版《21世纪中国思想白皮书》，以记录和向世界、向后世传达这个时期在中国国内无法公开、直率、真实和完整表达的各种思想。
+          </p>
+          <p class="text-right text-gray-600 mt-8">
+            <span class="block font-medium">時代社社长</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 特色内容区域 -->
+  <section class="container py-16">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <h3 class="text-lg font-semibold mb-2">学术出版</h3>
+        <p class="text-gray-600 text-sm">汇集当代中国最具影响力的学术著作</p>
+      </div>
+      <div class="text-center">
+        <h3 class="text-lg font-semibold mb-2">国际传播</h3>
+        <p class="text-gray-600 text-sm">搭建中国学术思想与世界对话的桥梁</p>
+      </div>
+      <div class="text-center">
+        <h3 class="text-lg font-semibold mb-2">专业专注</h3>
+        <p class="text-gray-600 text-sm">深耕政治思想、法制、经济宪政研究领域</p>
+      </div>
+    </div>
+  </section>
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+<BaseLayout title="About | Jidaisya" lang="en">
+  <Fragment slot="header"><Header lang="en" /></Fragment>
+  <section class="container py-12 max-w-4xl">
+    <h1 class="text-3xl font-serif mb-8">About Us</h1>
+    
+    <div class="space-y-8">
+      <!-- Company Information -->
+      <div class="bg-gray-50 rounded-lg p-8">
+        <h2 class="text-xl font-semibold mb-4">Company Information</h2>
+        <div class="space-y-3 text-gray-700">
+          <div>
+            <span class="font-medium">Company Name:</span>
+            <span> Jidaisya Co., Ltd.</span>
+          </div>
+          <div>
+            <span class="font-medium">Postal Code:</span>
+            <span> 〒657-0016</span>
+          </div>
+          <div>
+            <span class="font-medium">Address:</span>
+            <span> 11-12 Shinoharadai, Nada-ku, Kobe City</span>
+          </div>
+          <div>
+            <span class="font-medium">FAX:</span>
+            <span> +81-78-882-0353</span>
+          </div>
+          <div>
+            <span class="font-medium">Email:</span>
+            <a href="mailto:katsuyokobe@gmail.com" class="text-blue-600 hover:underline"> katsuyokobe@gmail.com</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publishing Philosophy -->
+      <div>
+        <h2 class="text-xl font-semibold mb-4">Publishing Philosophy</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Jidaisya strives to be a bridge connecting Chinese academic thought with the world. We focus on publishing authoritative academic works in the fields of modern and contemporary Chinese political thought, legal studies, and constitutional economics, providing in-depth and cutting-edge academic resources to readers and researchers worldwide.
+        </p>
+      </div>
+
+      <!-- Publishing Direction -->
+      <div>
+        <h2 class="text-xl font-semibold mb-4">Publishing Direction</h2>
+        <ul class="space-y-2 text-gray-700">
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2">•</span>
+            <span>Political Thought Studies: Exploring modern Chinese political theory and practice</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2">•</span>
+            <span>Legal Studies: Focusing on judicial system reform and rule of law construction</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2">•</span>
+            <span>Constitutional Economics: Studying the interaction between market economy and constitutional systems</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-600 mr-2">•</span>
+            <span>Social Culture: Documenting contemporary Chinese social changes and cultural development</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- White Paper on Chinese Thought -->
+      <div class="border-t pt-8">
+        <h2 class="text-xl font-semibold mb-4">White Paper on Chinese Thought in the 21st Century</h2>
+        <p class="text-gray-700 leading-relaxed">
+          As our core publishing project, the "White Paper on Chinese Thought in the 21st Century" series aims to systematically document and disseminate important academic thought in contemporary China. We believe that every era has its unique intellectual value, and these ideas need to be completely and truthfully recorded and passed on.
+        </p>
+      </div>
+    </div>
+  </section>
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>
