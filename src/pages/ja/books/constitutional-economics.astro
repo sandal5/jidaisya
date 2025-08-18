@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="憲政と経済 - 楊小凱 | 時代社"
+  description="憲政の支えなしには真の経済改革は不可能である、楊小凱教授が生前編集した憲政思想文集、ノーベル経済学賞に最も近い華人学者の思想的遺産。"
+  lang="ja"
+  type="article"
+  author="楊小凱"
+  image="https://jidaisya.pages.dev/images/books/constitutional-economics.jpg"
+>
+  <Fragment slot="header"><Header lang="ja" /></Fragment>
+  
+  <main class="container py-8">
+    <!-- パンくずナビ -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center space-x-2 text-sm text-gray-600">
+        <li>
+          <a href="/ja" class="hover:text-blue-600 transition-colors">ホーム</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <a href="/ja/books" class="hover:text-blue-600 transition-colors">書籍</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-gray-900 font-medium">憲政と経済</span>
+        </li>
+      </ol>
+    </nav>
+    <!-- 書籍タイトル部分 -->
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <!-- 書籍表紙 -->
+          <div class="lg:col-span-1">
+            <div class="sticky top-8">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-2xl">
+                <img 
+                  src="/images/books/constitutional-economics.jpg" 
+                  alt="憲政と経済 書籍表紙" 
+                  class="w-full h-full object-cover"
+                  width="300"
+                  height="400"
+                  loading="lazy"
+                />
+              </div>
+              <div class="mt-6 space-y-3">
+                <div class="text-center">
+                  <h1 class="text-2xl font-serif font-bold text-gray-900 mb-2">憲政と経済</h1>
+                  <p class="text-lg text-gray-600 mb-4">楊小凱 著</p>
+                  <div class="flex flex-wrap gap-2 justify-center">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">憲政経済学</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">制度経済学</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">政治経済学</span>
+                  </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 text-sm space-y-1">
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">ISBN:</span>
+                    <span class="font-medium">9784990601737</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">判型:</span>
+                    <span class="font-medium">A5版</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">ページ数:</span>
+                    <span class="font-medium">348ページ</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">出版日:</span>
+                    <span class="font-medium">2025年7月</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">定価:</span>
+                    <span class="font-medium text-brand-primary">3,500円＋税</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 書籍詳細内容 -->
+          <div class="lg:col-span-2 space-y-10">
+
+            <!-- 内容紹介 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">内容紹介</h2>
+              <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                <p>
+                  楊小凱氏はプリンストン大学経済学博士、オーストラリア・モナシュ大学講座教授、生前「ノーベル経済学賞に最も近い中国人」と言われた著名な経済学者。オーストラリア社会科学アカデミー会員、彼が提唱した「新興古典経済学」と「超限界分析と理論」はノーベル経済学賞受賞者のジェームズ・ブキャナンから「現代で最も重要な経済学研究成果」と高く評価された。
+                </p>
+                
+                <p>
+                  本書は楊氏が生前編集したもので、「憲政」がない経済発展は人類に危害しか齎さないと訴えたため、出版予定であった大学出版社から断れた。その遺志を継ぎ、遺族は海外出版の道を選んだ。「呪われた経済繁栄」が中国と世界にいかなる結実をもたらすのか、本書の予測が「息が詰まるほど当たっている」と評された。
+                </p>
+              </div>
+            </section>
+
+            <!-- 目次 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">目次</h2>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <ol class="space-y-2 text-gray-700">
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">序言</span> 張維迎</li>
+                  <li class="flex"><span class="font-medium text-gray-900 mr-3">第一部</span> 後発劣勢と憲政転換</li>
+                  <li class="ml-6">経済改革と憲政転換</li>
+                  <li class="ml-6">キリスト教と憲政</li>
+                  <li class="ml-6">後発劣勢、共和と自由</li>
+                  <li class="ml-6">良い資本主義と悪い資本主義</li>
+                  <li class="flex mt-3"><span class="font-medium text-gray-900 mr-3">第二部</span> 中国の憲政転換：歴史と展望</li>
+                  <li class="ml-6">中国憲政の発展</li>
+                  <li class="ml-6">コソボ事件から見る中国民主主義と憲政の展望</li>
+                  <li class="ml-6">中国統一の利害</li>
+                  <li class="ml-6">革命と反革命、民主主義と共和、科学と自由</li>
+                  <li class="ml-6">自由と中国の政治改革</li>
+                  <li class="ml-6">中国の憲政改革</li>
+                  <li class="ml-6">どうすれば憲法が尊重されるか</li>
+                  <li class="flex mt-3"><span class="font-medium text-gray-900 mr-3">第三部</span> 経済自由と憲政転換</li>
+                  <li class="ml-6">百年中国経済史読書ノート</li>
+                  <li class="ml-6">なぜ土地所有権改革が中国経済改革の急務なのか</li>
+                  <li class="ml-6">土地私有制と憲政共和の関係</li>
+                  <li class="ml-6">中国のWTO加盟の影響</li>
+                  <li class="ml-6">自由と経済学</li>
+                  <li class="ml-6">中国の経済制度改革</li>
+                  <li class="ml-6">自由企業と中国の経済発展</li>
+                  <li class="ml-6">中国大陸の所得分配不平等問題</li>
+                  <li class="ml-6">中国会社法実施の影響</li>
+                  <li class="flex mt-3"><span class="font-medium text-gray-900 mr-3">第四部</span> 経済学と憲政建設</li>
+                  <li class="ml-6">限定合理性</li>
+                  <li class="ml-6">私の理解するハイエクの思想</li>
+                  <li class="ml-6">新政治経済学と取引費用経済学</li>
+                  <li class="ml-6">所有権経済学と取引費用理論</li>
+                  <li class="ml-6">「組織革新」の新経済理論</li>
+                  <li class="flex mt-3"><span class="font-medium text-blue-600 mr-3">参考文献</span></li>
+                </ol>
+              </div>
+            </section>
+
+            <!-- 著者略歴 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">著者略歴</h2>
+              <div class="bg-blue-50 rounded-lg p-6">
+                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-100 flex-shrink-0">
+                      <img 
+                        src="/images/authors/yangxiaokai.jpg" 
+                        alt="楊小凱" 
+                        class="w-full h-full object-cover"
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <p class="mb-0">
+                        楊小凱（1948―2004）氏はプリンストン大学経済学博士、オーストラリア・モナシュ大学講座教授、生前「ノーベル経済学賞に最も近い中国人」と言われた著名な経済学者。オーストラリア社会科学アカデミー会員、彼が提唱した「新興古典経済学」と「超限界分析と理論」はノーベル経済学賞受賞者のジェームズ・ブキャナンから「現代で最も重要な経済学研究成果」と高く評価された。
+                      </p>
+                    </div>
+                  </div>
+                  <p>
+                    本書は楊氏が生前編集したもので、「憲政」がない経済発展は人類に危害しか齎さないと訴えたため、出版予定であった大学出版社から断れた。その遺志を継ぎ、遺族は海外出版の道を選んだ。「呪われた経済繁栄」が中国と世界にいかなる結実をもたらすのか、本書の予測が「息が詰まるほど当たっている」（China Thought Express）と評された。
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- 推薦の言葉 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">推薦の言葉</h2>
+              <div class="bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg p-6">
+                <blockquote class="text-lg italic text-gray-700 leading-relaxed">
+                  「私は、楊小凱が数理経済学者から憲政思想家へと転身していく過程を目の当たりにした。私の見るところでは、小凱の憲政に関する思想こそが、彼の生涯における学術的思索の頂点であり、彼は、自分を育ててくれた祖国に、現代化へと至る現実的な道を探し出したいと願っていた。しかし残念なことに、若くして世を去ったこと、そして中国における言論環境の変化により、彼の憲政に関する多くの論文は公に発表されることがなかった。それでも、偉大な思想が時の流れとともにその輝きを失うことは決してない。今日、世界はますます不確実になり、現在の中国もなお『どこへ向かうのか』が見えないままである。そんな中で、楊小凱の『憲政と経済』論文集が『時代社』から出版されたことは、まさに時宜を得たものと言えるであろう。彼の学術思想は、今なお新鮮で力強い輝きを放っている。」
+                </blockquote>
+                <cite class="block mt-4 text-right text-gray-600 not-italic">
+                  ——張維迎<br>
+                  <span class="text-sm">北京大学国家発展研究院経済学教授</span>
+                </cite>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- 下部ナビゲーション -->
+        <div class="mt-12 pt-8 border-t">
+          <div class="flex justify-between items-center">
+            <a href="/ja/books" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors group">
+              <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              <span>書籍一覧に戻る</span>
+            </a>
+            <div class="flex gap-4">
+              <a href="/ja/submit" class="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                出版社に連絡
+              </a>
+              <a href="#" class="px-4 py-2 text-sm border border-gray-300 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors">
+                この本を購入
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

@@ -1,0 +1,238 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="跋涉中的司法女神 - 贺卫方 | 时代社"
+  description="中国司法改革的正道与歧路，独立、公正、专业化的司法之路还有多远？贺卫方教授数十年司法思考的集大成之作。"
+  lang="zh-cn"
+  type="article"
+  author="贺卫方"
+  image="https://jidaisya.pages.dev/images/books/judicial-goddess.jpg"
+>
+  <Fragment slot="header"><Header lang="zh-cn" /></Fragment>
+  
+  <main class="container py-8">
+    <!-- 面包屑导航 -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center space-x-2 text-sm text-gray-600">
+        <li>
+          <a href="/zh-cn" class="hover:text-blue-600 transition-colors">首页</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <a href="/zh-cn/books" class="hover:text-blue-600 transition-colors">书籍</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-gray-900 font-medium">跋涉中的司法女神</span>
+        </li>
+      </ol>
+    </nav>
+    <!-- 书籍标题区域 -->
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <!-- 书籍封面 -->
+          <div class="lg:col-span-1">
+            <div class="sticky top-8">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-2xl">
+                <img 
+                  src="/images/books/judicial-goddess.jpg" 
+                  alt="跋涉中的司法女神 书籍封面" 
+                  class="w-full h-full object-cover"
+                  width="300"
+                  height="400"
+                  loading="lazy"
+                />
+              </div>
+              <div class="mt-6 space-y-3">
+                <div class="text-center">
+                  <h1 class="text-2xl font-serif font-bold text-gray-900 mb-2">跋涉中的司法女神</h1>
+                  <p class="text-lg text-gray-600 mb-4">贺卫方 著</p>
+                  <div class="flex flex-wrap gap-2 justify-center">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">法学理论</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">司法改革</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">法治建设</span>
+                  </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 text-sm space-y-1">
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">ISBN:</span>
+                    <span class="font-medium">9784990601720</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">开本:</span>
+                    <span class="font-medium">A5版</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">页数:</span>
+                    <span class="font-medium">268页</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">出版日期:</span>
+                    <span class="font-medium">2025年6月</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">定价:</span>
+                    <span class="font-medium text-brand-primary">3,000日元＋税</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 书籍详情内容 -->
+          <div class="lg:col-span-2 space-y-10">
+
+            <!-- 内容介绍 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">内容介绍</h2>
+              <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                <p class="text-lg font-medium text-gray-800 mb-6">
+                  日本时代社出版"21世纪中国思想白皮书"，承蒙不弃，让我成为这套丛书的作者之一。惶恐之余，也颇为犯难，不知道选择哪些文字汇成一个集子才符合丛书的主旨。考虑再三，还是把主题定在中国的司法改革方面。
+                </p>
+                
+                <p>
+                  回首过去四十多年多来的研究、教学和写作生涯，比较司法制度以及中国的司法改革毕竟是自己用力最多的一个领域。翻检过去的一些相关文字，包括论文、演讲、访谈、札记等，我最早在刊物上公开发表的文章是在研究生二年级时所写的关于英国陪审制的历史梳理，发表在上海《社会科学》1984年第4期上。收入本书最早的论文则是发表于1990年的"中国古代司法判决的风格与精神——以宋代为基本依据兼与英国比较"，该文差不多是为后来的思考和写作定下了基调，读者可以看出后来的文字大多围绕着该文所涉及到的一些主题展开。
+                </p>
+                
+                <p>
+                  随着我愈来愈多地进行参与式观察，逐渐丰富和深化了对于司法改革走向的理解，包括司法独立及其环境建设（例如司法区划的构思），司法人员的选任，正当程序的设置，司法管理以及决策的专业性，法律职业共同体的建构，凡此种种，均指向一个主题，那就是中国司法怎样走向真正的职业化。
+                </p>
+                
+                <p>
+                  不过，了解中国司法改革进程的人们都知道，朝向独立、公正和职业化的道路也是充满的坎坷。事实上，到了2010年代初期，司法改革就已经渐趋停顿。作为参与者，最初我内心存有一个信念或曰大胆假设，那就是在政治体制那些更为敏感领域的改革难以推进的情况下，致力于专业化的司法改革可以成为整体变革的一个突破口，甚至当司法权通过改革达到相当公正并具有较高公信力之时，它还可以成为引领并保障诸如政党、新闻、议会、土地等领域改革的关键机制，最终实现从意识形态到具体制度的全方位转型。后来的实践证明，这种假设还是过于一厢情愿了。
+                </p>
+                
+                <p>
+                  在一个直接的层面上，司法改革必须与政治体制的其他方面互相牵动和促进，在更深层次看，它更是一种文明的改造，涉及到观念形态、治理传统、社会机构、经济制度等多样和复杂的事项，难以在短时间内改造为一种足以推进司法转向的综合动力，司法女神在中国的命运注定不会是一帆风顺的。
+                </p>
+                
+                <p>
+                  在这种觉悟下，在过去的十多年里，我更多地致力于对包括司法独立在内的宪政体制的发生学研究。举一个例子，受内藤湖南的经典假说"唐宋变革论"的启发，通过对中国传统治理模式的演进以及西欧、日本等相关历史的阅读，逐渐领悟内藤学说中所揭示某些道理，诸如他所指出构成宋代成为最早的近世国家的某些特征，包括君主独裁体制的建立，贵族阶层与贵族政治的消亡，科举取士带来的官僚阶层的流动性、依附性和文人化（也意味着反专业化）等等，思考内藤学说中的可取和可议之处。当然，由于这类近作已经不在狭义的司法研究范围内了，故相关文章没有收入本书。有兴趣的读者可参看拙文"世祚遐久与君权限制——古典宪政与法治的比较观察"，载《法治流变与制度构建：孔杰荣教授九秩寿辰祝寿文集》，虞平编，台湾元照出版公司2020年6月版，页125-143；我曾以该文主题在早稻田大学做讲座，相关内容请参看《早稻田亚细亚评论》总21期（2019年3月，页36-55）。另，现任教于香港大学的李成博士对我参与司法改革的观察与反思，可见Cheng Li, The Power of Ideas: The Rising Influence of Thinkers and Thinker Tanks in China, World Scientific Publishing Company, 2017一书中题为"He Weifang (Legal Scholar)"的一章。
+                </p>
+                
+                <p>
+                  收入本书的文章有些曾发表过；此次编辑过程中，我对每一篇文章都做了或多或少的修订。回读这些跨度二十多年的文字，自觉尚无观点上变化的必要；成绩如何不敢自信，尚能保持学者的独立性，拒绝曲学阿世，算是差堪告慰之事。除了访谈文中留下大名的记者和相关刊物编辑之外，这里也要向多年来给我教益和鼓励的师友同道表达真诚的谢意（此处不一一列举致谢）。
+                </p>
+                
+                <p class="text-right text-gray-600 font-medium mt-8">
+                  贺卫方，2025年3月于北京
+                </p>
+              </div>
+            </section>
+
+            <!-- 目录 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">目录</h2>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <ol class="space-y-2 text-gray-700">
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">前言</span></li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">导言</span> 中国司法改革的正道与歧路</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第一章</span> 中国古典司法判决的风格与精神</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第二章</span> 司法独立在近代中国的展开</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第三章</span> 日本的司法研修制度</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第四章</span> "外来和尚"与中国法官</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第五章</span> 司法管理的专业化</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">附录</span> 1）司法区划的构思；2）与苏力商榷审判委员会问题</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第六章</span> 程序正义六准则</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第七章</span> 对抗制的引入与适应</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第八章</span> 律师困境及其根源</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">附录</span> 律师自治与社会认同</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第九章</span> 正义的行头</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第十章</span> 法庭修辞学九题</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">第十一章</span> 法律教育的职业化趋向</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">结语</span> 只往有经处走</li>
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">附录</span> 贺卫方论司法文章篇目</li>
+                </ol>
+              </div>
+            </section>
+
+            <!-- 作者简介 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">作者简介</h2>
+              <div class="bg-blue-50 rounded-lg p-6">
+                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-100 flex-shrink-0">
+                      <img 
+                        src="/images/authors/heweifang.jpg" 
+                        alt="贺卫方" 
+                        class="w-full h-full object-cover"
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <p class="mb-0">
+                        <strong>贺卫方</strong>，1960年生，山东烟台牟平人，西南政法大学法学学士（1982），中国政法大学法学硕士（1985），原任北京大学法学教授，2023年7月退休。兼任全国外国法制史学会副会长和中国多所大学名誉或兼职教授。
+                      </p>
+                    </div>
+                  </div>
+                  <p>
+                    研究和教学领域包括法理学、法制史以及比较法学等。入选《中国青年》杂志评选的"可能影响21世纪中国的100个青年人物"（2000），《南方人物周刊》当今50位著名公共知识分子（2005），美国《外交政策》（Foreign Policy）年度全球百名思想家（2011），德国《商报》（Handelsblatt）世界25位思想家（2014）。
+                  </p>
+                  <div class="mt-4">
+                    <h4 class="font-semibold text-gray-900 mb-2">主要著作：</h4>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                      <li>《法边余墨》（法律出版社2015三版）</li>
+                      <li>《司法的理念与制度》（中国政法大学出版社1998）</li>
+                      <li>《具体法治》（法律出版社2002）</li>
+                      <li>《运送正义的方式》（上海三联书店2003）</li>
+                      <li>《我们法律人》（香港城市大学出版社2019）</li>
+                    </ul>
+                    <p class="text-sm text-gray-600 mt-2">详见本书附录《贺卫方论司法文章篇目》</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+
+            <!-- 专家推荐 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">专家推荐</h2>
+              <div class="bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg p-6">
+                <blockquote class="text-lg italic text-gray-700 leading-relaxed">
+                  "中国正处在一个十字路口。中国共产党会继续保持实质上置身于法律之外，抑或中国会通过保障公民财产权和基本人权的方式拥抱法治？没有任何学者能比贺卫方更清晰和更富于激情地阐述这一困境。任何希望理解今日中国的人都不可忽视他的著作。"
+                </blockquote>
+                <cite class="block mt-4 text-right text-gray-600 not-italic">
+                  ——奈尔·弗格森（Niall Ferguson）<br>
+                  <span class="text-sm">哈佛大学劳伦斯·狄希历史学讲席教授</span>
+                </cite>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- 底部导航 -->
+        <div class="mt-12 pt-8 border-t">
+          <div class="flex justify-between items-center">
+            <a href="/zh-cn/books" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors group">
+              <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              <span>返回书籍列表</span>
+            </a>
+            <div class="flex gap-4">
+              <a href="/zh-cn/submit" class="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                联络出版社
+              </a>
+              <a href="#" class="px-4 py-2 text-sm border border-gray-300 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors">
+                购买本书
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

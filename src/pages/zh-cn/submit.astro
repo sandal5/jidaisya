@@ -13,10 +13,22 @@ import Footer from '../../components/Footer.astro';
       <p class="text-gray-700 mb-3">
         请将您的投稿材料发送至我们的邮箱：
       </p>
-      <a href="mailto:oukawk@yahoo.co.jp" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-lg">
-        <span class="mr-2">📧</span>
-        oukawk@yahoo.co.jp
-      </a>
+      <div class="space-y-2">
+        <div class="flex items-center">
+          <span class="mr-2">📧</span>
+          <a href="mailto:oukawk@yahoo.co.jp" class="text-blue-600 hover:text-blue-800 font-medium text-lg mr-2">
+            oukawk@yahoo.co.jp
+          </a>
+          <span class="text-gray-500 text-sm">（中文、日文）</span>
+        </div>
+        <div class="flex items-center">
+          <span class="mr-2">📧</span>
+          <a href="mailto:katsuyo@gmail.com" class="text-blue-600 hover:text-blue-800 font-medium text-lg mr-2">
+            katsuyo@gmail.com
+          </a>
+          <span class="text-gray-500 text-sm">（日本語、英語）</span>
+        </div>
+      </div>
     </div>
 
     <div class="space-y-8">
@@ -77,9 +89,18 @@ import Footer from '../../components/Footer.astro';
         <h2 class="text-xl font-semibold mb-4">联系我们</h2>
         <div class="text-gray-700 space-y-2">
           <p>如有任何疑问，欢迎通过以下方式联系我们：</p>
-          <div class="flex items-center">
-            <span class="font-medium mr-2">邮箱：</span>
-            <a href="mailto:oukawk@yahoo.co.jp" class="text-blue-600 hover:underline">oukawk@yahoo.co.jp</a>
+          <div>
+            <span class="font-medium mb-2 block">邮箱：</span>
+            <div class="ml-4 space-y-1">
+              <div class="flex items-center">
+                <a href="mailto:oukawk@yahoo.co.jp" class="text-blue-600 hover:underline mr-2">oukawk@yahoo.co.jp</a>
+                <span class="text-gray-500 text-sm">（中文、日文）</span>
+              </div>
+              <div class="flex items-center">
+                <a href="mailto:katsuyo@gmail.com" class="text-blue-600 hover:underline mr-2">katsuyo@gmail.com</a>
+                <span class="text-gray-500 text-sm">（日本語、英語）</span>
+              </div>
+            </div>
           </div>
           <div class="flex items-center">
             <span class="font-medium mr-2">传真：</span>

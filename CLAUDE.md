@@ -27,6 +27,7 @@ pnpm preview
 - **语言**: TypeScript - 类型安全的 JavaScript
 - **包管理**: pnpm 9.0.0
 - **部署**: Cloudflare Pages
+- **Serverless**: Cloudflare Workers (wrangler.toml 配置)
 
 ### 项目结构
 ```
@@ -55,10 +56,11 @@ src/
 └── styles/        # 全局样式
 ```
 
-### 双语架构
-- **默认语言**: 中文 (zh)，无 URL 前缀
-- **日文版本**: /ja/ 前缀路径
+### 多语言架构
+- **默认语言**: 中文繁体 (zh-tw)，无 URL 前缀
+- **支持语言**: 中文繁体、中文简体 (/zh-cn/)、日文 (/ja/)、英文 (/en/)
 - **i18n 配置**: astro.config.mjs 中定义，使用 Astro 内置 i18n 功能
+- **路由策略**: 默认语言不使用前缀，其他语言使用语言代码前缀
 
 ## 内容管理策略
 
@@ -99,6 +101,8 @@ src/
 - 优先使用 Tailwind CSS 类
 - 全局样式定义在 `src/styles/global.css`
 - 响应式设计采用移动优先策略
+- **品牌色彩**: 主色 `brand-primary` (#184E77)
+- **自定义配置**: tailwind.config.mjs 中扩展了颜色和圆角配置
 
 ### TypeScript 配置
 - 启用严格模式 (`strict: true`)

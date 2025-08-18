@@ -1,0 +1,219 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="宪政与经济 - 杨小凯 | 時代社"
+  description="没有宪政的支持就不可能有真正的经济改革，杨小凯教授生前编辑的宪政思想文集，诺贝尔经济学奖最近的华人学者的思想遗产。"
+  lang="zh-cn"
+  type="article"
+  author="杨小凯"
+  image="https://jidaisya.pages.dev/images/books/constitutional-economics.jpg"
+>
+  <Fragment slot="header"><Header lang="zh-cn" /></Fragment>
+  
+  <main class="container py-8">
+    <!-- 面包屑导航 -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center space-x-2 text-sm text-gray-600">
+        <li>
+          <a href="/zh-cn" class="hover:text-blue-600 transition-colors">首页</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <a href="/zh-cn/books" class="hover:text-blue-600 transition-colors">书籍</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-gray-900 font-medium">宪政与经济</span>
+        </li>
+      </ol>
+    </nav>
+    <!-- 书籍标题区域 -->
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <!-- 书籍封面 -->
+          <div class="lg:col-span-1">
+            <div class="sticky top-8">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-2xl">
+                <img 
+                  src="/images/books/constitutional-economics.jpg" 
+                  alt="宪政与经济 书籍封面" 
+                  class="w-full h-full object-cover"
+                  width="300"
+                  height="400"
+                  loading="lazy"
+                />
+              </div>
+              <div class="mt-6 space-y-3">
+                <div class="text-center">
+                  <h1 class="text-2xl font-serif font-bold text-gray-900 mb-2">宪政与经济</h1>
+                  <p class="text-lg text-gray-600 mb-4">杨小凯 著</p>
+                  <div class="flex flex-wrap gap-2 justify-center">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">宪政经济学</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">制度经济学</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">政治经济学</span>
+                  </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 text-sm space-y-1">
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">ISBN:</span>
+                    <span class="font-medium">9784990601737</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">开本:</span>
+                    <span class="font-medium">A5版</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">页数:</span>
+                    <span class="font-medium">348页</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">出版日期:</span>
+                    <span class="font-medium">2025年7月</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">定价:</span>
+                    <span class="font-medium text-brand-primary">3,500日元＋税</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 书籍详情内容 -->
+          <div class="lg:col-span-2 space-y-10">
+
+            <!-- 内容介绍 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">内容介绍</h2>
+              <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                <p>
+                  本文集为杨小凯先生本人生前所编辑，"宪政"主题亦为杨小凯先生本人所定，收录了他有关这一主题的所有重要文章，反映了杨小凯先生对"宪政"与经济发展之间关系的深刻思考。本书原定于在中国某"著名大学"出版社出版，但因众所周知的原因生前未能如愿，此次得杨小凯先生亲属授权出版。
+                </p>
+                
+                <p>
+                  近年来中国社会形势的变化证明了作者生前的许多英明论断：没有宪政的支持就不可能有真正的经济改革，没有意识形态的改革就不会有真正的政治改革，没有社会公平就不可能有真正的市场经济，"政府机会主义"主导下的经济发展带来的只是更大的收入分配不公，没有土地制度的改革即土地私有化就不可能使中国的数亿农民得到解放、农村得到发展，没有制度上的自由化而只是依赖模仿技术的工业化带来的只能是"后发劣势"，政治垄断下的工业化是培育"坏资本主义"的温床……，一个否定宪政的社会，不会有真正的经济发展。
+                </p>
+              </div>
+            </section>
+
+            <!-- 目录 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">目录</h2>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <ol class="space-y-2 text-gray-700">
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">序言</span> 张维迎</li>
+                  <li class="flex"><span class="font-medium text-gray-900 mr-3">第一部</span> 后发劣势与宪政转轨</li>
+                  <li class="ml-6">经济改革与宪政转轨</li>
+                  <li class="ml-6">基督教和宪政</li>
+                  <li class="ml-6">后发劣势，共和与自由</li>
+                  <li class="ml-6">好资本主义和坏资本主义</li>
+                  <li class="flex mt-3"><span class="font-medium text-gray-900 mr-3">第二部</span> 中国的宪政转轨：历史与前景</li>
+                  <li class="ml-6">中国宪政的发展</li>
+                  <li class="ml-6">从科索沃事件看中国民主和宪政的前景</li>
+                  <li class="ml-6">中国统一之利弊</li>
+                  <li class="ml-6">革命与反革命，民主与共和，科学与自由</li>
+                  <li class="ml-6">自由与中国的政治改革</li>
+                  <li class="ml-6">中国的宪政改革</li>
+                  <li class="ml-6">怎样才能使宪法得到尊重</li>
+                  <li class="flex mt-3"><span class="font-medium text-gray-900 mr-3">第三部</span> 经济自由与宪政转轨</li>
+                  <li class="ml-6">百年中国经济史读书笔记</li>
+                  <li class="ml-6">为什么土地所有权改革是中国经济改革当务之急</li>
+                  <li class="ml-6">土地私有制与宪政共和的关系</li>
+                  <li class="ml-6">中国加入世贸组织的影响</li>
+                  <li class="ml-6">自由与经济学</li>
+                  <li class="ml-6">中国的经济制度改革</li>
+                  <li class="ml-6">自由企业和中国的经济发展</li>
+                  <li class="ml-6">中国大陆收入分配不均问题</li>
+                  <li class="ml-6">中国公司法实施的影响</li>
+                  <li class="flex mt-3"><span class="font-medium text-gray-900 mr-3">第四部</span> 经济学与宪政建设</li>
+                  <li class="ml-6">有限理性</li>
+                  <li class="ml-6">我所了解的哈耶克思想</li>
+                  <li class="ml-6">新政治经济学与交易费用经济学</li>
+                  <li class="ml-6">产权经济学与交易费用理论</li>
+                  <li class="ml-6">"组织创新"的新经济理论</li>
+                  <li class="flex mt-3"><span class="font-medium text-blue-600 mr-3">参考文献</span></li>
+                </ol>
+              </div>
+            </section>
+
+            <!-- 作者简介 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">作者简介</h2>
+              <div class="bg-blue-50 rounded-lg p-6">
+                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-100 flex-shrink-0">
+                      <img 
+                        src="/images/authors/yangxiaokai.jpg" 
+                        alt="杨小凯" 
+                        class="w-full h-full object-cover"
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <p class="mb-0">
+                        <strong>杨小凯</strong>（1948-2004），曾用名杨曦光，普林斯顿大学博士，著名经济学家。澳大利亚莫纳什大学讲座教授、澳大利亚社会科学院院士、报酬递增和经济组织中心主任。
+                      </p>
+                    </div>
+                  </div>
+                  <p>
+                    其提出和研究的新兴古典经济学与超边际分析和理论，被诺贝尔经济学奖获得者布坎南称为当今最重要的经济学研究成果。由于他在经济学上的巨大成就，被誉为离"诺贝尔经济学奖最近的华人"。
+                  </p>
+                  <p>
+                    "文革"时期，杨小凯就读湖南长沙一中，因大字报"中国向何处去"获罪，囹圄十年。赴美求学时写下牢狱经历《牛鬼蛇神录》，并在国际著名经济学杂志发表多篇论文，著有《杨小凯学术文库》9卷版和大量经济类散文。2004年7月7日逝世于墨尔本。
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- 专家推荐 -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">专家推荐</h2>
+              <div class="bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg p-6">
+                <blockquote class="text-lg italic text-gray-700 leading-relaxed">
+                  "我见证了杨小凯从数理经济学家到宪政思想家的转变。在我看来，小凯有关宪政的思想是他一生学术思想的顶峰，与他一生放不下的'中国情节'密切相关。他想为养育他的祖国寻找一条通往现代化的可行路径。可惜，由于英年早逝，加之中国舆论环境的变化，他有关宪政的大部分论文未能公开发表。但伟大的思想从来不会随着时间的流逝而失去光芒。今天的世界变得更为不确定，当下的中国仍然不知向何处去，杨小凯《宪政与经济》文集的出版，正当其时。他的学术思想历久弥新！"
+                </blockquote>
+                <cite class="block mt-4 text-right text-gray-600 not-italic">
+                  ——张维迎<br>
+                  <span class="text-sm">北京大学国家发展研究院经济学教授</span>
+                </cite>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- 底部导航 -->
+        <div class="mt-12 pt-8 border-t">
+          <div class="flex justify-between items-center">
+            <a href="/zh-cn/books" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors group">
+              <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              <span>返回书籍列表</span>
+            </a>
+            <div class="flex gap-4">
+              <a href="/zh-cn/submit" class="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                联络出版社
+              </a>
+              <a href="#" class="px-4 py-2 text-sm border border-gray-300 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors">
+                购买本书
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>

@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="Constitution and Economics - Yang Xiaokai | Jidaisya"
+  description="Without constitutional support, genuine economic reform is impossible. Professor Yang Xiaokai's collection of constitutional thought, the intellectual legacy of the Chinese scholar closest to the Nobel Prize in Economics."
+  lang="en"
+  type="article"
+  author="Yang Xiaokai"
+  image="https://jidaisya.pages.dev/images/books/constitutional-economics.jpg"
+>
+  <Fragment slot="header"><Header lang="en" /></Fragment>
+  
+  <main class="container py-8">
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center space-x-2 text-sm text-gray-600">
+        <li>
+          <a href="/en" class="hover:text-blue-600 transition-colors">Home</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <a href="/en/books" class="hover:text-blue-600 transition-colors">Books</a>
+        </li>
+        <li class="flex items-center">
+          <svg class="w-4 h-4 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="text-gray-900 font-medium">Constitution and Economics</span>
+        </li>
+      </ol>
+    </nav>
+    <!-- Book Title Section -->
+    <section class="py-12">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <!-- Book Cover -->
+          <div class="lg:col-span-1">
+            <div class="sticky top-8">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-2xl">
+                <img 
+                  src="/images/books/constitutional-economics.jpg" 
+                  alt="Constitution and Economics Book Cover" 
+                  class="w-full h-full object-cover"
+                  width="300"
+                  height="400"
+                  loading="lazy"
+                />
+              </div>
+              <div class="mt-6 space-y-3">
+                <div class="text-center">
+                  <h1 class="text-2xl font-serif font-bold text-gray-900 mb-2">Constitution and Economics</h1>
+                  <p class="text-lg text-gray-600 mb-4">by Yang Xiaokai</p>
+                  <div class="flex flex-wrap gap-2 justify-center">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Constitutional Economics</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Institutional Economics</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Political Economy</span>
+                  </div>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 text-sm space-y-1">
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">ISBN:</span>
+                    <span class="font-medium">9784990601737</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Format:</span>
+                    <span class="font-medium">A5, 348 pages</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Publication:</span>
+                    <span class="font-medium">July 2025</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Price:</span>
+                    <span class="font-medium text-brand-primary">¥3,500 + tax</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book Details Content -->
+          <div class="lg:col-span-2 space-y-10">
+
+            <!-- About This Book -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">About This Book</h2>
+              <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                <p>
+                  This collection was personally compiled by Professor Yang Xiaokai during his lifetime, with the "constitutional" theme also determined by Yang himself. It includes all his important articles on this subject, reflecting Yang's profound thinking on the relationship between "constitution" and economic development. The book was originally intended to be published by a "famous university" press in China, but for well-known reasons, this wish was not fulfilled during his lifetime. This publication has now been authorized by Yang Xiaokai's family.
+                </p>
+                
+                <p>
+                  Recent changes in China's social situation have proven many of the author's prescient judgments: without constitutional support, genuine economic reform is impossible; without ideological reform, there can be no real political reform; without social equity, there can be no genuine market economy; economic development dominated by "government opportunism" brings only greater income inequality; without land system reform—land privatization—it is impossible to liberate China's hundreds of millions of farmers and develop rural areas; industrialization based solely on technological imitation without institutional liberalization can only lead to "late-mover disadvantage"; industrialization under political monopoly is a breeding ground for "bad capitalism"... A society that denies constitutionalism will not have genuine economic development.
+                </p>
+              </div>
+            </section>
+
+            <!-- Table of Contents -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">Table of Contents</h2>
+              <div class="bg-gray-50 rounded-lg p-6">
+                <ol class="space-y-2 text-gray-700">
+                  <li class="flex"><span class="font-medium text-blue-600 mr-3">Preface</span> Zhang Weiying</li>
+                  <li class="flex"><span class="font-medium text-gray-900 mr-3">Part I</span> Late-Mover Disadvantage and Constitutional Transition</li>
+                  <li class="ml-6">Economic Reform and Constitutional Transition</li>
+                  <li class="ml-6">Christianity and Constitution</li>
+                  <li class="ml-6">Late-Mover Disadvantage, Republic and Freedom</li>
+                  <li class="ml-6">Good Capitalism and Bad Capitalism</li>
+                  <li class="flex mt-3"><span class="font-medium text-gray-900 mr-3">Part II</span> China's Constitutional Transition: History and Prospects</li>
+                  <li class="ml-6">Development of Chinese Constitutionalism</li>
+                  <li class="ml-6">Kosovo Incident and Prospects for Democracy and Constitutionalism in China</li>
+                  <li class="ml-6">Benefits and Drawbacks of Chinese Unification</li>
+                  <li class="ml-6">Revolution and Counter-revolution, Democracy and Republic, Science and Freedom</li>
+                  <li class="ml-6">Freedom and China's Political Reform</li>
+                  <li class="ml-6">China's Constitutional Reform</li>
+                  <li class="ml-6">How to Make the Constitution Respected</li>
+                  <li class="flex mt-3"><span class="font-medium text-gray-900 mr-3">Part III</span> Economic Freedom and Constitutional Transition</li>
+                  <li class="ml-6">Reading Notes on a Century of Chinese Economic History</li>
+                  <li class="ml-6">Why Land Ownership Reform is the Urgent Priority for China's Economic Reform</li>
+                  <li class="ml-6">Relationship between Private Land Ownership and Constitutional Republic</li>
+                  <li class="ml-6">Impact of China's WTO Accession</li>
+                  <li class="ml-6">Freedom and Economics</li>
+                  <li class="ml-6">China's Economic System Reform</li>
+                  <li class="ml-6">Free Enterprise and China's Economic Development</li>
+                  <li class="ml-6">Income Distribution Inequality in Mainland China</li>
+                  <li class="ml-6">Impact of China's Corporate Law Implementation</li>
+                  <li class="flex mt-3"><span class="font-medium text-gray-900 mr-3">Part IV</span> Economics and Constitutional Construction</li>
+                  <li class="ml-6">Bounded Rationality</li>
+                  <li class="ml-6">My Understanding of Hayek's Thought</li>
+                  <li class="ml-6">New Political Economy and Transaction Cost Economics</li>
+                  <li class="ml-6">Property Rights Economics and Transaction Cost Theory</li>
+                  <li class="ml-6">New Economic Theory of "Organizational Innovation"</li>
+                  <li class="flex mt-3"><span class="font-medium text-blue-600 mr-3">References</span></li>
+                </ol>
+              </div>
+            </section>
+
+            <!-- About the Author -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">About the Author</h2>
+              <div class="bg-blue-50 rounded-lg p-6">
+                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+                  <div class="flex items-start gap-4 mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-100 flex-shrink-0">
+                      <img 
+                        src="/images/authors/yangxiaokai.jpg" 
+                        alt="Yang Xiaokai" 
+                        class="w-full h-full object-cover"
+                        width="64"
+                        height="64"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <p class="mb-0">
+                        <strong>Yang Xiaokai</strong> (1948-2004), formerly known as Yang Xiguang, was a Princeton University PhD and renowned economist. He served as Chair Professor at Monash University, Australia, Fellow of the Academy of Social Sciences in Australia, and Director of the Center for the Study of Increasing Returns and Economic Organization.
+                      </p>
+                    </div>
+                  </div>
+                  <p>
+                    His proposed and researched New Classical Economics and Inframarginal Analysis were called "the most important economic research achievements today" by Nobel Prize winner James Buchanan. Due to his tremendous achievements in economics, he was hailed as "the Chinese scholar closest to the Nobel Prize in Economics."
+                  </p>
+                  <p>
+                    During the Cultural Revolution, Yang Xiaokai was a student at Changsha No. 1 Middle School in Hunan. He was imprisoned for ten years due to his big-character poster "Whither China?" While studying in the United States, he wrote about his prison experience in "Record of Monsters and Demons," published numerous papers in prestigious international economics journals, and authored the 9-volume "Yang Xiaokai Academic Library" and many economic essays. He passed away in Melbourne on July 7, 2004.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Expert Recommendation -->
+            <section>
+              <h2 class="text-xl font-semibold mb-4 pb-2 border-b border-gray-200">Endorsement</h2>
+              <div class="bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg p-6">
+                <blockquote class="text-lg italic text-gray-700 leading-relaxed">
+                  "I witnessed Yang Xiaokai's transformation from a mathematical economist to a constitutional thinker. In my view, Xiaokai's thoughts on constitutionalism represent the pinnacle of his lifelong academic thinking, closely related to his lifelong 'China complex.' He wanted to find a viable path to modernization for the motherland that nurtured him. Unfortunately, due to his early death and changes in China's public opinion environment, most of his papers on constitutionalism could not be published openly. But great thoughts never lose their luster with the passage of time. Today's world has become more uncertain, and today's China still doesn't know where it's heading. The publication of Yang Xiaokai's 'Constitution and Economics' collection comes at the right time. His academic thought remains fresh and vibrant!"
+                </blockquote>
+                <cite class="block mt-4 text-right text-gray-600 not-italic">
+                  —Zhang Weiying<br>
+                  <span class="text-sm">Professor of Economics, National School of Development, Peking University</span>
+                </cite>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- Bottom Navigation -->
+        <div class="mt-12 pt-8 border-t">
+          <div class="flex justify-between items-center">
+            <a href="/en/books" class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors group">
+              <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              <span>Back to Books</span>
+            </a>
+            <div class="flex gap-4">
+              <a href="/en/submit" class="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                Contact Publisher
+              </a>
+              <a href="#" class="px-4 py-2 text-sm border border-gray-300 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-colors">
+                Purchase This Book
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>
