@@ -1,2 +1,2 @@
 # Redirect for any missing pages to 404
-/* /index.html 200
+# 移除软 404；保留可能的必要路由映射（如果后续需要可按需添加）

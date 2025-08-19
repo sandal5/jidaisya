@@ -32,7 +32,7 @@ python -m http.server 8000  # 或使用其他静态服务器
 ```
 
 ## 部署验证
-- 根路径: https://jidaisya.pages.dev/
-- 中文: https://jidaisya.pages.dev/zh-cn/
-- 日文: https://jidaisya.pages.dev/ja/
-- 英文: https://jidaisya.pages.dev/en/
+- 根路径: https://jidaisya.com/
+- 中文: https://jidaisya.com/zh-cn/
+- 日文: https://jidaisya.com/ja/
+- 英文: https://jidaisya.com/en/

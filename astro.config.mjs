@@ -1,9 +1,10 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://jidaisya.pages.dev',
+  site: 'https://jidaisya.com',
   base: '/',
   trailingSlash: 'ignore',
   build: {
@@ -20,6 +21,17 @@ export default defineConfig({
   integrations: [
     tailwind({
       applyBaseStyles: false
+    }),
+    sitemap({
+      i18n: {
+        defaultLocale: 'zh-tw',
+        locales: {
+          'zh-tw': 'zh-Hant',
+          'zh-cn': 'zh-Hans',
+          'ja': 'ja-JP',
+          'en': 'en'
+        }
+      }
     })
   ],
   vite: {

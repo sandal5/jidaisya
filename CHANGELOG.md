@@ -1,3 +1,12 @@
+## Alpha-1.8 — 2025-08-19 20:08
+- SEO：接入 `@astrojs/sitemap` 自动生成站点地图（含多语言 hreflang 互链），构建输出 `dist/sitemap-index.xml`
+- SEO：删除手写 `public/sitemap.xml` 以避免冲突；`robots.txt` 更新为 `Sitemap: https://jidaisya.com/sitemap-index.xml`
+- SEO：修复 `hreflang` 双斜杠问题，统一多语言 URL 规范化
+- SEO：修复 JSON-LD（Article/Breadcrumb）为有效 JSON，通过 `{JSON.stringify(...)}` 输出
+- 安全：放宽 CSP 中 `script-src` 允许 JSON-LD 内联脚本；保留其它安全头
+- 404：移除软 404，新增标准 `public/404.html`
+- 文案：修正简体中文书籍索引页错字（“宸政”→“宪政”）
+
 ## Alpha-1.7 — 2025-08-15 21:32
 - 新增：王力雄《中國的叙拉古與柏拉圖》专门页面，覆盖所有4种语言
 - 内容：完整整合作者简介、专家推荐、目录、序言摘录和相关作品

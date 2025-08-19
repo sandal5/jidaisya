@@ -9,3 +9,5 @@
 2025-08-15 14:08 [USER] @pic.index.md 按照这个文档，生成对应目录和占位图片
 2025-08-15 14:08 [ASSISTANT] 已创建 src/assets/images/ 的 books/covers、brand、news/2024 目录与占位图片，并更新 CHANGELOG 到 Alpha-0.3。
 2025-08-15 16:08 修复 Pages 404：更新 wrangler.toml 为 Pages 规范（[build] command='pnpm run build'，pages_build_output_dir='dist'）；请重新部署验证。
+2025-08-18 16:08 [USER] 深度检查这个项目的SEO情况
+2025-08-18 16:08 [ASSISTANT] 已完成首轮SEO审计（只读）：全局<head>含title/description/OG/Twitter、canonical、hreflang已配置；robots.txt与sitemap.xml存在。发现问题：1) hreflang链接存在双斜杠（例如 //ja），2) 结构化数据脚本缺少花括号包裹导致JSON无效（Breadcrumb/Article区块与Organization外层插值写法不规范），3) 多语言sitemap缺少互链至默认语言 zh-tw 的xhtml:link，4) 某些中文文案含错别字（“宸政”等），5) 安全头CSP过严可能阻断内联JSON-LD与内联样式，6) 图片未提供width/height/alt在部分列表场景。建议修复并验证。
