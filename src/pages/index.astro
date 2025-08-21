@@ -5,17 +5,21 @@ import Footer from '../components/Footer.astro';
 ---
 <BaseLayout 
   title="時代社 | 首頁" 
-  description="21世紀中國思想白皮書 - 專注中國近現當代政治思想、法制研究、經濟憲政等領域的權威學術著作出版與傳播"
+  description="21世紀中國思想白皮書 - 專注中國近現當代政治思想、法治研究、經濟憲政等領域的權威學術著作出版與傳播"
   lang="zh-tw"
   image="https://jidaisya.com/images/brand/logo.png"
 >
   <Fragment slot="header"><Header lang="zh-tw" /></Fragment>
-  <!-- 主標題區域 -->
+  <!-- 我們的出版物 -->
   <section class="container py-16">
-    <div class="text-center">
-      <h1 class="text-4xl md:text-5xl font-serif mb-6">21世紀中國思想白皮書</h1>
-      <p class="text-xl text-gray-600 mb-2">學術出版</p>
-      <p class="text-gray-600 max-w-2xl mx-auto">專注中國近現當代研究的權威學術著作出版與傳播</p>
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-serif mb-8 text-center">我們的出版物</h2>
+      <div class="bg-brand-primary/5 rounded-xl p-8">
+        <h3 class="text-2xl font-serif mb-4 text-brand-primary">21世紀中國思想白皮書系列</h3>
+        <p class="text-gray-700 leading-relaxed">
+          一套在中國國內無法出版的、詳實記錄和深刻分析了當代中國政治、經濟、法治、社會等各個領域中所存在問題的思想性文集。每卷都呈現出如何塑造現代中國的批判性觀點和深刻見解。
+        </p>
+      </div>
     </div>
   </section>
 
@@ -92,7 +96,7 @@ import Footer from '../components/Footer.astro';
       </div>
       <div class="text-center">
         <h3 class="text-lg font-semibold mb-2">專業專注</h3>
-        <p class="text-gray-600 text-sm">深耕政治思想、法制、經濟憲政研究領域</p>
+        <p class="text-gray-600 text-sm">深耕政治思想、法治、經濟憲政研究領域</p>
       </div>
     </div>
   </section>
