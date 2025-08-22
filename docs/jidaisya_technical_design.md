@@ -172,7 +172,7 @@ featured: true
 
 ### 关键词优化策略
 **核心关键词集群**:
-- 品牌词汇: "時代社", "jidaisya", "21世纪中国思想白皮书"
+- 品牌词汇: "時代社", "jidaisha", "21世纪中国思想白皮书"
 - 学术领域: "中国近现当代研究", "政治思想研究", "法制研究", "经济宪政"
 - 作者相关: "王力雄著作", "贺卫方法学", "杨小凯经济学"
 - 长尾关键词: "中国现代政治思想分析", "司法制度改革研究", "宪政经济学理论"
@@ -330,7 +330,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: jidaisya
+          projectName: jidaisha
           directory: dist
 ```
 
@@ -366,7 +366,7 @@ develop分支: 开发环境代码
 **项目依赖管理**:
 ```json
 {
-  "name": "jidaisya-website",
+  "name": "jidaisha-website",
   "dependencies": {
     "astro": "^4.0.0",
     "@astrojs/tailwind": "^5.0.0",

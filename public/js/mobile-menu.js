@@ -1,4 +1,4 @@
-// Mobile menu functionality for Jidaisya website
+// Mobile menu functionality for jidaisha website
 document.addEventListener('DOMContentLoaded', function() {
   const button = document.getElementById('mobile-menu-button');
   const menu = document.getElementById('mobile-menu');

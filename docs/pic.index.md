@@ -16,7 +16,7 @@ src/
 │       │       ├── judicial-goddess.jpg
 │       │       └── constitution-economics.jpg
 │       ├── brand/
-│       │   ├── jidaisya-logo.svg
+│       │   ├── jidaisha-logo.svg
 │       │   └── series-logo.png
 │       └── news/
 │           └── 2024/

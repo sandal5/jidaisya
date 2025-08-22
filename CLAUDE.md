@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概述
 
-時代社（Jidaisya）学术出版社网站 - 基于 Astro 的静态双语学术网站，专注于中国近现当代政治思想、法制、经济宪政研究的学术出版社。
+時代社（jidaisha）学术出版社网站 - 基于 Astro 的静态双语学术网站，专注于中国近现当代政治思想、法制、经济宪政研究的学术出版社。
 
 ## 开发命令
 
@@ -124,9 +124,9 @@ src/
 
 ## 重要文档
 
-- `docs/jidaisya_technical_design.md` - 完整技术设计文档
+- `docs/jidaisha_technical_design.md` - 完整技术设计文档
 - `docs/academic_publisher_prd.md` - 产品需求文档
-- `docs/jidaisya_test_cases.md` - 测试用例文档
+- `docs/jidaisha_test_cases.md` - 测试用例文档
 - `docs/pic.index.md` - 图像管理规范
 - `CHANGELOG.md` - 版本更新记录
 
