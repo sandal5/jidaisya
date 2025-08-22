@@ -17,7 +17,7 @@ const currentPath = Astro.url.pathname;
 
 // 生成语言版本的URL（规范化，避免重复斜杠）
 function getLocalizedUrl(targetLang: string) {
-  const baseUrlRaw = (Astro.site as unknown as string | URL) || 'https://jidaisya.com';
+  const baseUrlRaw = (Astro.site as unknown as string | URL) || 'https://jidaisha.com';
   const baseUrl = String(baseUrlRaw).replace(/\/+$/, '');
   let path = currentPath;
   
@@ -45,7 +45,7 @@ const languages = [
 ];
 
 // 默认社交分享图（基于 Astro.site 动态）
-const siteForImage = (Astro.site as unknown as string | URL) || 'https://jidaisya.com';
+const siteForImage = (Astro.site as unknown as string | URL) || 'https://jidaisha.com';
 const baseForImage = String(siteForImage).replace(/\/+$/, '');
 const defaultImage = `${baseForImage}/images/brand/logo.png`;
 const ogImage = image || defaultImage;
@@ -117,8 +117,8 @@ if (currentPath !== '/') {
         "@type": "Organization",
         "name": "時代社",
         "description": "專注中國近現當代研究的權威學術著作出版與傳播",
-        "url": "https://jidaisya.com",
-        "logo": "https://jidaisya.com/images/brand/logo.png",
+        "url": "https://jidaisha.com",
+        "logo": "https://jidaisha.com/images/brand/logo.png",
         "sameAs": [],
         "address": {
           "@type": "PostalAddress",

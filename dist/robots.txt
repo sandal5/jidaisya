@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://jidaisya.com/sitemap-index.xml
+Sitemap: https://jidaisha.com/sitemap-index.xml
 
 # Disallow sensitive paths
 Disallow: /_astro/

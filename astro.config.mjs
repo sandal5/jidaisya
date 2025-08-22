@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://jidaisya.com',
+  site: 'https://jidaisha.com',
   base: '/',
   trailingSlash: 'ignore',
   build: {

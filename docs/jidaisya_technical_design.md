@@ -162,7 +162,7 @@ featured: true
   "publisher": {
     "@type": "Organization",
     "name": "時代社",
-    "url": "https://jidaisya.com"
+    "url": "https://jidaisha.com"
   },
   "isbn": "978-4-XXXX-XXXX-X",
   "datePublished": "2023-10-15",
@@ -186,9 +186,9 @@ featured: true
 ### 多语言SEO优化
 **Hreflang标签配置**:
 ```html
-<link rel="alternate" hreflang="zh" href="https://jidaisya.com/books/china-syracuse-plato" />
-<link rel="alternate" hreflang="ja" href="https://jidaisya.com/ja/books/china-syracuse-plato" />
-<link rel="alternate" hreflang="x-default" href="https://jidaisya.com/books/china-syracuse-plato" />
+<link rel="alternate" hreflang="zh" href="https://jidaisha.com/books/china-syracuse-plato" />
+<link rel="alternate" hreflang="ja" href="https://jidaisha.com/ja/books/china-syracuse-plato" />
+<link rel="alternate" hreflang="x-default" href="https://jidaisha.com/books/china-syracuse-plato" />
 ```
 
 **语言特定优化**:
@@ -335,7 +335,7 @@ jobs:
 ```
 
 **域名和SSL配置**:
-- 配置jidaisya.com域名指向Cloudflare Pages
+- 配置jidaisha.com域名指向Cloudflare Pages
 - 启用自动SSL证书管理
 - 配置适当的安全头部和HTTPS重定向
 - 实现www和非www版本的统一重定向策略

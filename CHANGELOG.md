@@ -1,6 +1,6 @@
 ## Alpha-1.8 — 2025-08-19 20:08
 - SEO：接入 `@astrojs/sitemap` 自动生成站点地图（含多语言 hreflang 互链），构建输出 `dist/sitemap-index.xml`
-- SEO：删除手写 `public/sitemap.xml` 以避免冲突；`robots.txt` 更新为 `Sitemap: https://jidaisya.com/sitemap-index.xml`
+- SEO：删除手写 `public/sitemap.xml` 以避免冲突；`robots.txt` 更新为 `Sitemap: https://jidaisha.com/sitemap-index.xml`
 - SEO：修复 `hreflang` 双斜杠问题，统一多语言 URL 规范化
 - SEO：修复 JSON-LD（Article/Breadcrumb）为有效 JSON，通过 `{JSON.stringify(...)}` 输出
 - 安全：放宽 CSP 中 `script-src` 允许 JSON-LD 内联脚本；保留其它安全头
