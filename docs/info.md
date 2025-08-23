@@ -17,5 +17,5 @@ Email:oukawk@yahoo.co.jp
 
 Purpose of Publishing
 Every era produces thoughts that can only arise within that specific context, and profound ideas often emerge in turbulent times. One reason Japan embarked on the path of war was the lack of freedom of speech and publication, which prevented people from expressing their true thoughts. For the sake of future peace in East Asia and the world, Jidaisha published the ‘White Paper on Chinese Thought in the 21st Century’. This publication is not just a local endeavour, but a global conversation, aiming to document and convey the various ideas from this period that cannot be openly, directly, truthfully, and comprehensively expressed within China to the world and future generations.
-Director, Jidaisha
+Director, JIDAISHA
 
